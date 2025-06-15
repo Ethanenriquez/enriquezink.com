@@ -4,7 +4,7 @@ This is the source code for my personal website, EnriquezInk.com.
 Built with HTML and CSS, and hosted on GitHub Pages.
 
 ## Live Site
-[View the website here.](https://Ethanenriquez.github.io/EnriquezInk.com/)
+[View the website here.](https://Ethanenriquez.github.io/index.html/)
 
 ## Features
   Portfolio of my art and comics
