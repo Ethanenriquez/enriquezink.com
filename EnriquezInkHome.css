@@ -191,7 +191,6 @@
 
   /*Commission Art*/
   .commissionart {
-    display: none;
     color: #ffffff;
     border: solid 3px #ffffff;
     transition: 0.75s;
