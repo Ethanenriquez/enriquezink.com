@@ -3,12 +3,13 @@
 This is the source code for my personal website, EnriquezInk.com.  
 Built with HTML and CSS, and hosted on GitHub Pages.
 
-## Live Site
-[EnriquezInk.com](https://Ethanenriquez.github.io/enriquezink.com/)
+## Live Site  
+[EnriquezInk.com](https://ethanenriquez.github.io/enriquezink.com/)
 
-## Features
-  Portfolio of my art and comics
-  Responsive design
-  Modern navbar and UI
+## Features (V0.0.15.6.2025)  
+--Modern UI (Neumorphism and Glassmorphism)  
+--Responsive Web Design  
+--Hover Buttons for Desktop
 
-Feel free to explore or contribute!
+## Feedback  
+Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
