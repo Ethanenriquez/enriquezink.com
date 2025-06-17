@@ -1,3 +1,116 @@
+/*Animation Startup*/
+@media screen {
+  @keyframes topheadFromTop {
+    from {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .tophead {
+    animation: topheadFromTop 0.75s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+  }
+
+  @keyframes titleFromTop {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .title {
+    animation: titleFromTop 0.75s ease-out forwards;
+    animation-delay: 0.75s;
+    opacity: 0;
+  }
+
+  @keyframes navbarFromTop {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .navbar {
+    animation: navbarFromTop 0.75s ease-out forwards;
+    animation-delay: 0.75s;
+    opacity: 0;
+  }
+
+  @keyframes iconFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .hamburger {
+    animation: iconFromRight 0.75s ease-out forwards;
+    animation-delay: 1.25s;
+    opacity: 0;
+  }
+
+  @keyframes bottomheadFromBottom {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .bottomhead {
+    animation: bottomheadFromBottom 0.75s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+  }
+
+  @keyframes versionlabelFromDisappear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .version-label {
+    animation: versionlabelFromDisappear 0.75s ease-out forwards;
+    animation-delay: 1.25s;
+    opacity: 0;
+  }
+
+  @keyframes copyrighttextFromBottom {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .copyright-text {
+    animation: copyrighttextFromBottom 0.75s ease-out forwards;
+    animation-delay: 0.75s;
+    opacity: 0;
+  }
+}
+
 /*Desktop Version*/
 @media screen {
   body {
@@ -70,27 +183,25 @@
   .navbar {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    z-index: 25;
+    align-self: center;
+    gap: 20px;
   }
 
-  .navbar a {
+  .nav-item a {
     display: inline-block;
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: clamp(15px, 3vw, 20px);
+    color: #ffffff;
     text-decoration: none;
-    margin-left: 20px;
-    z-index: 25;
-    transition: 0.8s;
+    font-size: clamp(20px, 2.5vw, 30px);
+    font-weight: bold;
+    transition: 0.75s;
   }
 
-  .navbar a:hover {
+  .nav-item a:hover {
+    color: #ffffff;
     text-shadow:
-      0 0 30px #FFFFFF,
-      2px 2px 8px rgba(0, 0, 0, 1),
-      -2px -2px 5px rgba(255, 255, 255, 0.5);
-    color: #FFF4DB;
+      -3px -3px 10px rgba(255, 255, 255, 0.5),
+      10px 10px 20px rgba(0, 0, 0, 1),
+      0 0 30px rgb(255, 241, 195);
     transform: scale(1.2);
     transition: 0.25s;
   }
@@ -120,8 +231,8 @@
     width: 100%;
     height: 100%;
     background: rgba(48, 48, 48, 0.2);
-    border-bottom: solid 2px rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(6px);
+    border-bottom: solid 2px rgba(255, 255, 255, 0.15);
     z-index: -1;
   }
 
@@ -165,7 +276,8 @@
     font-size: 30px;
     font-weight: bold;
     background: rgba(48, 48, 48, 0.5);
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6),
+    box-shadow:
+      10px 10px 20px rgba(0, 0, 0, 0.6),
       -5px -5px 20px rgba(255, 255, 255, 0.25);
     border-radius: 20px;
     backdrop-filter: blur(5px);
@@ -181,9 +293,9 @@
 
   .myart:hover {
     font-size: 32px;
-    color: #ffffff;
+    color: #FFFFFF;
     background: #508EFF;
-    border: solid 4px #ffffff;
+    border: solid 4px #FFFFFF;
     box-shadow: 0 0 40px #508EFF;
     transform: scale(1.05);
     transition: 0.25s;
@@ -191,22 +303,21 @@
 
   /*Commission Art*/
   .commissionart {
-    color: #ffffff;
-    border: solid 3px #ffffff;
+    color: #FFFFFF;
+    border: solid 3px #FFFFFF;
     transition: 0.75s;
   }
 
   .commissionart:hover {
     font-size: 32px;
     color: #000000;
-    background: #ffffff;
+    background: #FFFFFF;
     border: solid 4px #000000;
-    box-shadow: 0 0 40px #ffffff;
+    box-shadow: 0 0 40px #FFFFFF;
     transform: scale(1.05);
     transition: 0.25s;
   }
 
-  /*Character Design*/
   .characterdesign {
     color: #FFDC83;
     border: solid 3px #FFDC83;
@@ -215,9 +326,9 @@
 
   .characterdesign:hover {
     font-size: 32px;
-    color: #ffffff;
+    color: #FFFFFF;
     background: #FFDC83;
-    border: solid 4px #ffffff;
+    border: solid 4px #FFFFFF;
     box-shadow: 0 0 40px #FFDC83;
     transform: scale(1.05);
     transition: 0.25s;
@@ -232,9 +343,9 @@
 
   .comicseries:hover {
     font-size: 32px;
-    color: #ffffff;
+    color: #FFFFFF;
     background: #68FF50;
-    border: solid 4px #ffffff;
+    border: solid 4px #FFFFFF;
     box-shadow: 0 0 40px #68FF50;
     transform: scale(1.05);
     transition: 0.25s;
@@ -243,6 +354,7 @@
   /*© 2025 EthanEnriquez*/
   .copyright-text {
     color: rgba(255, 255, 255, 0.5);
+    padding-top: 5px;
     cursor: default;
     font-size: clamp(15px, 2vw, 18px);
     z-index: 15;
@@ -253,7 +365,7 @@
     color: rgba(255, 255, 255, 0.25);
     cursor: default;
     font-size: clamp(10px, 1.5vw, 15px);
-    padding: 30px 0 0 0;
+    padding: 30px 0 0 5px;
     z-index: 15;
   }
 
@@ -270,7 +382,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding-right: 20px;
     box-sizing: border-box;
     z-index: 10;
   }
@@ -312,52 +424,40 @@
   .hamburger {
     display: block;
   }
-
-  .tophead {
-    border-bottom: none;
-  }
-
+  
   .navbar {
-    background: rgba(0, 0, 0, 0.15);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 0;
-    border-top: solid 0px rgba(255, 255, 255, 0);
-    border-bottom: solid 2px rgba(255, 255, 255, 0.15);
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
-    opacity: 1;
-    transition: 0.5s ease-out;
-    display: block;
-    text-align: center;
-    z-index: 5;
+  position: fixed;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(10, 10, 10, 0.5);
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s ease-out;
+  z-index: 20;
   }
 
   #check:checked ~ .navbar {
-    height: 200px;
-    backdrop-filter: blur(6px);
-    border-top: solid 2px rgba(255, 255, 255, 0.15);
+    border-radius: 0 0 20px 20px;
     border-bottom: solid 2px rgba(255, 255, 255, 0.15);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25);
+    height: 300px;
     opacity: 1;
-    z-index: 1;
   }
 
-  .navbar a {
-    display: block;
-    margin: 25px 0 20px 0;
+  .nav-item a {
     font-size: 30px;
-    transform: translateY(-200px);
-    transition: 0.75s;
+    margin: 10px 0;
     opacity: 0;
+    transition: 0.5s;
   }
 
-  #check:checked ~ .navbar a {
-    transform: translateY(0);
+  #check:checked ~ .navbar .nav-item a {
     opacity: 1;
-    transition-delay: calc(0.1s * var(--i));
   }
 }
