@@ -11,5 +11,9 @@ Built with HTML and CSS, and hosted on GitHub Pages.
 --Responsive Web Design  
 --Hover Buttons for Desktop
 
+## Features (V0.0.17.6.2025)
+--Simple Startup Animation
+--Bug Fixes
+
 ## Feedback  
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
