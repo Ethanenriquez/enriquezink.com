@@ -25,7 +25,7 @@ Modern UI (Neumorphism and Glassmorphism)
 
 Responsive Web Design
 
-Hover Buttons Desktop
+Hover Buttons
 
 ## Feedback  
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
