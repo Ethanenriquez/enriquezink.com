@@ -1,65 +1,90 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="EnriquezInkHome.css" />
-    <title>EnriquezInk</title>
-  </head>
-  <body>
-    <!--Tophead-->
-    <header class="tophead">
-      <a class="title">EnriquezInk</a>
 
-      <!--Menu Toggle-->
-      <input type="checkbox" id="check" />
-      <label for="check" class="hamburger">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </label>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="EnriquezInkHome.css" />
+  <title>EnriquezInk</title>
+  <!--Social Media Icon-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
 
-      <!--Navigation-->
-      <nav class="navbar">
-        <div class="nav-item">
-          <a href="#about" style="--i: 2">About</a>
-        </div>
-        <div class="nav-item">
-          <a href="#links" id="linkbtn" style="--i: 1">Links</a>
-        </div>
-        <div class="nav-item">
-          <a href="#contact" style="--i: 0">Contact</a>
-        </div>
-        <div class="navBackgroundBlur"></div>
-      </nav>
-    </header>
+<body>
+  <!--Tophead-->
+  <header class="tophead">
+    <a class="title">EnriquezInk</a>
 
-    <div id="popupBackgroundBlur"></div>
-    <div id="linkopened" class="popup" role="dialog" aria-modal="true">
-      <button id="closePopup" aria-label="Close Links Popup"></button>
-      <ul>
-      <li><a href="https://twitter.com/">Twitter</a></li>
-      <li><a href="https://instagram.com/">Instagram</a></li>
-      <li><a href="https://webtoon.com/">Webtoon</a></li>
-      </ul>
+    <!--Menu Toggle-->
+    <input type="checkbox" id="check" />
+    <label for="check" class="hamburger" role="button" aria-label="Toggle navigation" tabindex="0">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </label>
+
+    <!--Navigation-->
+    <nav class="navbar">
+      <div class="nav-item">
+        <a href="#about" style="--i: 2">About</a>
+      </div>
+      <div class="nav-item">
+        <a href="#links" id="linkbtn" style="--i: 1">Links</a>
+      </div>
+      <div class="nav-item">
+        <a href="#contact" style="--i: 0">Contact</a>
+      </div>
+      <div class="navBackgroundBlur"></div>
+    </nav>
+  </header>
+
+  <!--Links-->
+  <div id="popupBackgroundBlur"></div>
+  <div id="linkopened" class="popup" role="dialog" aria-modal="true">
+    <button id="closePopup" aria-label="Close Links Popup"></button>
+    <h1 class="popup-title">Links</h1>
+    <div class="popup-links">
+      <a href="https://ko-fi.com/ethanenriquez" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-coffee" style="margin-right: 8px;"></i>
+        <span class="text-label">Ko-fi</span>
+      </a>
+      <a href="https://www.webtoons.com/p/community/en/u/Ethanenriquez" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-book" style="margin-right: 8px;"></i>
+        <span class="text-label">Webtoon</span>
+      </a>
+      <a href="https://x.com/ethanenriquez01" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-x-twitter" style="margin-right: 8px;"></i>
+        <span class="text-label">X/Twitter</span>
+      </a>
+      <a href="https://www.instagram.com/ethanjurrienenriquez/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram" style="margin-right: 8px;"></i>
+        <span class="text-label">Instagram</span>
+      </a>
+      <a href="https://www.pinterest.com/ethanenriquez466/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-pinterest" style="margin-right: 8px;"></i>
+        <span class="text-label">Pinterest</span>
+      </a>
+      <a href="https://linktr.ee/Ethanenriquez" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-link" style="margin-right: 8px;"></i>
+        <span class="text-label">Linktree</span>
+      </a>
     </div>
+  </div>
 
-    <!--Buttons-->
-    <div class="homebuttons">
-      <a href="#myart" class="myart">My Art</a>
-      <!--<a href="#commissionart" class="commissionart">Commission Art</a>-->
-      <!--<a href="#characterdesign" class="characterdesign">Character Design</a>-->
-      <a href="#comicseries" class="comicseries">Comic Series</a>
-    </div>
+  <!--Buttons-->
+  <div class="homebuttons">
+    <a href="#myart" class="myart">My Art</a>
+    <a href="#commissionart" class="commissionart">Commission Art</a>
+    <a href="#characterdesign" class="characterdesign">Character Design</a>
+    <a href="#comicseries" class="comicseries">Comic Series</a>
+  </div>
 
-    <!-- Scroll Target Section -->
-    <section style="min-height: 500px"></section>
+  <!--Bottomhead-->
+  <footer class="bottomhead">
+    <span class="version-label">V0.1.21.6.2025</span>
+    <span class="copyright-text">&copy; 2025 EthanEnriquez</span>
+  </footer>
+  <script src="EnriquezInkHome.js"></script>
+</body>
 
-    <!--Bottomhead-->
-    <footer class="bottomhead">
-      <span class="version-label">V0.1.21.6.2025</span>
-      <span class="copyright-text">&copy; 2025 EthanEnriquez</span>
-    </footer>
-    <script src="EnriquezInkHome.js"></script>
-  </body>
 </html>
