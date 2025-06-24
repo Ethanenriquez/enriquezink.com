@@ -6,6 +6,11 @@ Built with HTML, CSS, JS, and hosted on GitHub Pages.
 ## Live Site  
 [EnriquezInk.com](https://ethanenriquez.github.io/enriquezink.com/)
 
+## Features (V0.1.24.6.2025)
+Links Updated
+
+Bug Fixes
+
 ## Features (V0.1.21.6.2025)
 Simple Startup Animation - (Opacity only) {V0.0.17.6.2025 caused buggy for some reason}
 
