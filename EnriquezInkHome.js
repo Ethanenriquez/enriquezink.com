@@ -6,12 +6,17 @@ const navCheck = document.getElementById("check");
 function showPopup() {
   linkpopup.classList.add("show");
   popupBackgroundBlur.classList.add("show");
+  document.body.style.overflow = "hidden";
   if (navCheck) navCheck.checked = false;
+
+  const firstLink = linkpopup.querySelector("a");
+  if (firstLink) firstLink.focus();
 }
 
 function hidePopup() {
   linkpopup.classList.remove("show");
   popupBackgroundBlur.classList.remove("show");
+  document.body.style.overflow = "";
 }
 
 linkbtn.addEventListener("click", function (e) {
@@ -35,4 +40,10 @@ document.addEventListener("keydown", function (e) {
   if (e.key === "Escape") {
     hidePopup();
   }
+});
+
+document.querySelectorAll(".navbar a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("check").checked = false;
+  });
 });
