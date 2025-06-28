@@ -3,19 +3,21 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="EnriquezInkHome.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EnriquezInk</title>
-  <!--Social Media Icon-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="Home.css" />
+  <link rel="stylesheet" href="About.css" />
+  <link rel="stylesheet" href="Links.css" />
+  <link rel="stylesheet" href="Responsive.css" />
 </head>
 
 <body>
-  <!--Tophead-->
+  <!-- Top Header -->
   <header class="tophead">
     <a class="title">EnriquezInk</a>
 
-    <!--Menu Toggle-->
+    <!-- Menu Toggle -->
     <input type="checkbox" id="check" />
     <label for="check" class="hamburger" role="button" aria-label="Toggle navigation" tabindex="0">
       <span class="line"></span>
@@ -23,10 +25,10 @@
       <span class="line"></span>
     </label>
 
-    <!--Navigation-->
+    <!-- Navigation -->
     <nav class="navbar">
       <div class="nav-item">
-        <a href="#about" style="--i: 2">About</a>
+        <a href="#about" id="aboutbtn" style="--i: 2">About</a>
       </div>
       <div class="nav-item">
         <a href="#links" id="linkbtn" style="--i: 1">Links</a>
@@ -34,44 +36,56 @@
       <div class="nav-item">
         <a href="#contact" style="--i: 0">Contact</a>
       </div>
-      <div class="navBackgroundBlur"></div>
     </nav>
   </header>
 
-  <!--Links-->
+  <!-- About Section -->
+  <div class="aboutBackground" id="aboutBackground">
+    <button id="closeAbout" class="backButton" aria-label="Go back"></button>
+    <div class="aboutTH">
+      <h2>About Me</h2>
+    </div>
+    <section id="aboutopened" class="aboutopened">
+      <p>
+        Hi! I'm Ethan Jurrien Enriquez (pronouns: he/him), born in 2007 in
+        Cebu City, a beginner comic and future graphic novel publisher.
+      </p>
+      <p>
+        I'm currently using Adobe Photoshop through my school account to
+        create my comics. I plan to switch to Krita (free) or Clip Studio
+        Paint (paid) to develop my art further.
+      </p>
+    </section>
+  </div>
+
+  <!-- Links Popup -->
   <div id="popupBackgroundBlur"></div>
   <div id="linkopened" class="popup" role="dialog" aria-modal="true">
     <button id="closePopup" aria-label="Close Links Popup"></button>
     <h1 class="popup-title">Links</h1>
     <div class="popup-links">
       <a href="https://ko-fi.com/ethanenriquez" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-coffee" style="margin-right: 8px;"></i>
-        <span class="text-label">Ko-fi</span>
+        <i class="fas fa-coffee" style="margin-right: 8px"></i><span class="text-label">Ko-fi</span>
       </a>
       <a href="https://www.webtoons.com/p/community/en/u/Ethanenriquez" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-book" style="margin-right: 8px;"></i>
-        <span class="text-label">Webtoon</span>
+        <i class="fas fa-book" style="margin-right: 8px"></i><span class="text-label">Webtoon</span>
       </a>
       <a href="https://x.com/ethanenriquez01" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-x-twitter" style="margin-right: 8px;"></i>
-        <span class="text-label">X/Twitter</span>
+        <i class="fab fa-x-twitter" style="margin-right: 8px"></i><span class="text-label">X/Twitter</span>
       </a>
       <a href="https://www.instagram.com/ethanjurrienenriquez/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram" style="margin-right: 8px;"></i>
-        <span class="text-label">Instagram</span>
+        <i class="fab fa-instagram" style="margin-right: 8px"></i><span class="text-label">Instagram</span>
       </a>
       <a href="https://www.pinterest.com/ethanenriquez466/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-pinterest" style="margin-right: 8px;"></i>
-        <span class="text-label">Pinterest</span>
+        <i class="fab fa-pinterest" style="margin-right: 8px"></i><span class="text-label">Pinterest</span>
       </a>
       <a href="https://linktr.ee/Ethanenriquez" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-link" style="margin-right: 8px;"></i>
-        <span class="text-label">Linktree</span>
+        <i class="fas fa-link" style="margin-right: 8px"></i><span class="text-label">Linktree</span>
       </a>
     </div>
   </div>
 
-  <!--Buttons-->
+  <!-- Buttons -->
   <div class="homebuttons">
     <a href="#myart" class="myart">My Art</a>
     <a href="#commissionart" class="commissionart">Commission Art</a>
@@ -79,12 +93,13 @@
     <a href="#comicseries" class="comicseries">Comic Series</a>
   </div>
 
-  <!--Bottomhead-->
+  <!-- Bottom Footer -->
   <footer class="bottomhead">
     <span class="version-label">V0.1.24.6.2025</span>
     <span class="copyright-text">&copy; 2025 EthanEnriquez</span>
   </footer>
-  <script src="EnriquezInkHome.js"></script>
+
+  <script src="Interactive.js"></script>
 </body>
 
 </html>
