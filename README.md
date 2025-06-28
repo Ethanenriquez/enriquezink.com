@@ -4,7 +4,7 @@ This is the source code for my personal website, EnriquezInk.com.
 Built with HTML, CSS, JS, and hosted on GitHub Pages.
 
 ## Live Site  
-[EnriquezInk.com](https://ethanenriquez.github.io/enriquezink.com/)
+[EnriquezInk.com](https://ethanenriquez.github.io/enriquezink.com)
 
 ## Feedback  
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
