@@ -6,7 +6,7 @@ Built with HTML, CSS, JS, and hosted on GitHub Pages.
 ## Live Site  
 [EnriquezInk.com](https://ethanenriquez.github.io/enriquezink.com/)
 
-## Features (V0.1.24.6.2025)
+## Features (V0.1.28.6.2025)
 About Page Added - (Interactive Javascript)
 
 CSS Files Separated for easy to find and some Files are Completed
