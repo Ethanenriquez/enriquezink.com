@@ -4,10 +4,15 @@ This is the source code for my personal website, EnriquezInk.com.
 Built with HTML, CSS, JS, and hosted on GitHub Pages.
 
 ## Live Site  
-[EnriquezInk.com](https://ethanenriquez.github.io/enriquezink.com)
+<a href="https://ethanenriquez.github.io/enriquezink.com" target="_blank" rel="noopener noreferrer">EnriquezInk.com</a>
 
 ## Feedback  
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
+
+## Features (V0.2.5.7.2025)
+About Page Updated Additional Details
+
+Bug Fixes
 
 ## Features (V0.1.28.6.2025)
 About Page Added - (Interactive Javascript)
