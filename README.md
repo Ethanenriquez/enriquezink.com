@@ -10,7 +10,7 @@ Built with HTML, CSS, JS, and hosted on GitHub Pages.
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
 
 ## Features (V0.2.5.7.2025)
-About Page Updated Additional Details
+About Page updated with additional details and improved arrangement for better readability
 
 Bug Fixes
 
