@@ -1,4 +1,5 @@
 /*CODE COMPLETED*/
+/*Adding more Texture, Background Design and Animation in the Future*/
 
 /*Animation Startup*/
 @keyframes fadeIn {
@@ -51,8 +52,8 @@ html {
     .title:hover {
         color: #FFF4DB;
         text-shadow:
-            -5px -5px 20px rgba(255, 255, 255, 0.5),
-            10px 10px 20px rgba(0, 0, 0, 0.5);
+            -5px -5px 10px rgba(255, 255, 255, 0.5),
+            10px 10px 10px rgba(0, 0, 0, 0.5);
         transition: 0.25s;
     }
 
