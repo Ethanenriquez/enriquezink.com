@@ -1,4 +1,4 @@
-
+/*CODE COMPLETED*/
 
 /*About Page*/
 .aboutBackground {
@@ -7,14 +7,69 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(180deg, #DBCFAA, #FFDD75);
+    background: linear-gradient(180deg, #dbcfaa, #ffdd75);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition:
-        opacity 0.5s ease,
-        visibility 0.5s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
     z-index: 90;
+}
+
+.letters-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 0;
+}
+
+.letters-bg img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    max-width: 1150px;
+    max-height: 1150px;
+    pointer-events: none;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.letter1 {
+    bottom: 0;
+    right: 0;
+}
+
+.letter2 {
+    bottom: 40%;
+    right: 10%;
+}
+
+.letter3 {
+    bottom: 60%;
+    left: 5%;
+}
+
+.letter4 {
+    top: 0;
+    right: 0;
+}
+
+.letter5 {
+    bottom: -40%;
+    left: 20%;
+}
+
+.letter6 {
+    top: 0;
+    left: 0;
+}
+
+.letter7 {
+    top: 60%;
+    left: 0;
 }
 
 .aboutBackground.show {
@@ -26,24 +81,36 @@
 .aboutTH {
     position: fixed;
     display: flex;
+    align-items: flex-start;
     justify-content: center;
-    padding-top: 20px;
     width: 100%;
-    height: 84%;
-    bottom: 0;
+    height: 100%;
+    top: 100px;
     background: linear-gradient(180deg, rgba(217, 217, 217, 0.25), rgba(0, 0, 0, 0));
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
     border-top: 2px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0 -5px 20px rgba(255, 255, 255, 0.25);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow-y: auto;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .aboutTH h2 {
-    font-weight: bold;
+    margin-top: 0;
+    padding: 15px 0;
     text-align: center;
+    font-weight: bold;
     font-size: 40px;
-    margin-bottom: 40px;
-    margin: 0;
     color: #ffffff;
+    transition: 0.75s;
+}
+
+.aboutTH h2:hover {
+    text-shadow:
+        3px 3px 5px rgba(0, 0, 0, 0.25),
+        -3px -3px 5px rgba(255, 255, 255, 0.5);
+    transition: 0.25s;
 }
 
 .backButton {
@@ -88,28 +155,34 @@
 
 .backButton:hover::before {
     transform: translateY(-1.6px) translateX(0px) rotate(-45deg) scale(1.2);
+    box-shadow:
+        3px 3px 5px rgba(0, 0, 0, 0.25),
+        -3px -3px 5px rgba(255, 255, 255, 0.5);
     transition: 0.25s;
 }
 
 .backButton:hover::after {
     transform: translateY(1.6px) translateX(0.4px) rotate(45deg) scale(1.2);
+    box-shadow:
+        -3px 3px 5px rgba(255, 255, 255, 0.5),
+        3px -3px 5px rgba(0, 0, 0, 0.25);
     transition: 0.25s;
 }
 
 .aboutopened {
     position: fixed;
-    top: 25%;
-    bottom: 0;
+    top: 175px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 20px 40px 60px 30px;
+    padding: 20px 0 60px 40px;
     width: clamp(400px, 80vw, 1000px);
-    overflow-y: auto;
-    background: linear-gradient(180deg, rgba(217, 217, 217, 0.25), rgba(0, 0, 0, 0));
-    backdrop-filter: blur(10px);
+    height: calc(100vh - 175px - 20px);
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(100, 100, 100, 0.25) 90%, rgba(255, 255, 255, 0.25) 100%);
+    backdrop-filter: blur(15px);
     box-shadow:
-        inset 5px 5px 20px rgba(0, 0, 0, 0.25),
-        inset -5px -5px 20px rgba(255, 255, 255, 0.25),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.25),
+        inset -5px -5px 10px rgba(255, 255, 255, 0.25),
         5px 5px 20px rgba(255, 255, 255, 0.25),
         -5px -5px 20px rgba(255, 255, 255, 0.25),
         -5px 5px 20px rgba(255, 255, 255, 0.25),
@@ -117,13 +190,10 @@
     border: 2px solid rgba(255, 255, 255, 0.25);
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    color: #FFFFFF;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition:
-        opacity 0.5s ease,
-        visibility 0.5s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
     z-index: 100;
 }
 
@@ -132,23 +202,79 @@
 }
 
 .aboutopened::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-}
-
-.aboutopened::-webkit-scrollbar-track {
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .aboutopened.show {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .aboutopened p {
-    font-weight: bold;
     font-size: 20px;
     line-height: 1.6;
     color: rgb(255, 255, 255);
+}
+
+/*Gmail Links*/
+.contactBtn {
+    display: inline-block;
+    padding: 2px 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow:
+        2px 2px 5px rgba(0, 0, 0, 0.25),
+        -2px -2px 5px rgba(255, 255, 255, 0.25);
+    transition: 0.75s;
+}
+
+.contactBtn:hover {
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 12px #ffffff;
+    transition: 0.25s;
+}
+
+/*Fade-Out Text on Scroll*/
+.fade {
+    max-width: 1000px;
+    margin: auto;
+    padding-right: 40px;
+    padding-top: 20px;
+    height: 70vh;
+    overflow-y: auto;
+    position: relative;
+    mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 5%,
+            rgba(0, 0, 0, 1) 95%,
+            rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 5%,
+            rgba(0, 0, 0, 1) 95%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+
+.fade p:last-child {
+    margin-bottom: 60px;
+}
+
+.fade::-webkit-scrollbar {
+    width: 10px;
+}
+
+.fade::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+}
+
+.fade::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
 }
