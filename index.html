@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="en">
 
+<!-- Title Tag -->
+<title>EnriquezInk - Independent Comics & Digital Art</title>
+<meta name="description"
+  content="EnriquezInk - Independent creator of unique comics and digital art. Explore original graphic novels and artwork.">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,6 +14,7 @@
   <link rel="stylesheet" href="Home.css" />
   <link rel="stylesheet" href="About.css" />
   <link rel="stylesheet" href="Links.css" />
+  <link rel="stylesheet" href="Contact.css" />
   <link rel="stylesheet" href="Responsive.css" />
 </head>
 
@@ -34,99 +40,121 @@
         <a href="#links" id="linkbtn" style="--i: 1">Links</a>
       </div>
       <div class="nav-item">
-        <a href="#contact" style="--i: 0">Contact</a>
+        <a href="#contact" id="contactbtn" style="--i: 0">Contact</a>
       </div>
     </nav>
   </header>
 
   <!-- About Section -->
   <div class="aboutBackground" id="aboutBackground">
-      <div class="letters-bg">
-        <img src="aboutBackgroundVector/bigOne.svg" class="letter letter1" alt="Letter 1" />
-        <img src="aboutBackgroundVector/vector2.svg" class="letter letter2" alt="Letter 2" />
-        <img src="aboutBackgroundVector/vector3.svg" class="letter letter3" alt="Letter 3" />
-        <img src="aboutBackgroundVector/vector4.svg" class="letter letter4" alt="Letter 4" />
-        <img src="aboutBackgroundVector/vector5.svg" class="letter letter5" alt="Letter 5" />
-        <img src="aboutBackgroundVector/vector6.svg" class="letter letter6" alt="Letter 6" />
-        <img src="aboutBackgroundVector/vector7.svg" class="letter letter7" alt="Letter 7" />
-      </div>
-      <button id="closeAbout" class="backButton" aria-label="Go back"></button>
-      <div class="aboutTH">
-
-        <h2>About Me</h2>
-      </div>
-      <section id="aboutopened" class="aboutopened">
-        <div class="fade">
-          <p>
-            Hi! I'm <strong>Ethan</strong> (pronouns: he/him), born in 2007 in Cebu City. I'm a beginner <strong>comic
-              publisher</strong>.
-          </p>
-          <p>
-            My goal is to become an <strong>animator</strong> and a great <strong>fictional storyteller</strong>. I'm
-            working on my first graphic novel to build <strong>patience and consistency</strong>. I'm inspired by
-            <strong>cultures, music, and animated stories</strong>, and I like experimenting with different tools to
-            create
-            unique work.
-          </p>
-          <p>
-            I currently use <strong>Adobe Photoshop</strong> and <strong>Krita</strong> for my projects, and plan to
-            switch
-            to <strong>Clip Studio Paint</strong> in the future.
-          </p>
-          <p>
-            I built this website myself—it took a few months, and I'm still a beginner <strong>web developer</strong>.
-          </p>
-          <p>
-            If you want to get in touch for anything <strong>important</strong> or <strong>urgent</strong>, feel free to
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ethanenriquez466@gmail.com" class="contactBtn"
-              target="_blank" rel="noopener noreferrer">Contact</a> me!
-          </p>
-        </div>
-      </section>
+    <div class="letters-bg">
+      <img src="backgroundVector/bigOne.svg" class="letter letter1" alt="Letter 1" />
+      <img src="backgroundVector/vector2.svg" class="letter letter2" alt="Letter 2" />
+      <img src="backgroundVector/vector3.svg" class="letter letter3" alt="Letter 3" />
+      <img src="backgroundVector/vector4.svg" class="letter letter4" alt="Letter 4" />
+      <img src="backgroundVector/vector5.svg" class="letter letter5" alt="Letter 5" />
+      <img src="backgroundVector/vector6.svg" class="letter letter6" alt="Letter 6" />
+      <img src="backgroundVector/vector7.svg" class="letter letter7" alt="Letter 7" />
     </div>
+    <button id="closeAbout" class="backButton" aria-label="Go back"></button>
+    <div class="aboutTH">
+      <h2>About Me</h2>
+    </div>
+    <section id="aboutopened" class="aboutopened">
+      <div class="fade">
+        <p>
+          Hi! I'm <strong>Ethan</strong> (pronouns: he/him), born in 2007 in Cebu City. I'm a beginner <strong>comic
+            publisher</strong>.
+        </p>
+        <p>
+          My goal is to become an <strong>animator</strong> and a great <strong>fictional storyteller</strong>. I'm
+          working on my first graphic novel to build <strong>patience and consistency</strong>. I'm inspired by
+          <strong>cultures, music, and animated stories</strong>, and I like experimenting with different tools to
+          create
+          unique work.
+        </p>
+        <p>
+          I currently use <strong>Adobe Photoshop</strong> and <strong>Krita</strong> for my projects, and plan to
+          switch
+          to <strong>Clip Studio Paint</strong> in the future.
+        </p>
+        <p>
+          I built this website myself—it took a few months, and I'm still a beginner <strong>web developer</strong>.
+        </p>
+        <p>
+          If you want to get in touch for anything <strong>important</strong> or <strong>urgent</strong>, feel free to
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ethanenriquez466@gmail.com" class="contactBtn"
+            target="_blank" rel="noopener noreferrer">Contact</a> me!
+        </p>
+      </div>
+    </section>
+  </div>
 
-    <!-- Links Popup -->
-    <div id="popupBackgroundBlur"></div>
-    <div id="linkopened" class="popup" role="dialog" aria-modal="true">
-      <button id="closePopup" aria-label="Close Links Popup"></button>
-      <h1 class="popup-title">Links</h1>
-      <div class="popup-links">
-        <a href="https://ko-fi.com/ethanenriquez" target="_blank" rel="noopener noreferrer">
-          <i class="fas fa-coffee" style="margin-right: 8px"></i><span class="text-label">Ko-fi</span>
-        </a>
-        <a href="https://www.webtoons.com/p/community/en/u/Ethanenriquez" target="_blank" rel="noopener noreferrer">
-          <i class="fas fa-book" style="margin-right: 8px"></i><span class="text-label">Webtoon</span>
-        </a>
-        <a href="https://x.com/ethanenriquez01" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-x-twitter" style="margin-right: 8px"></i><span class="text-label">X/Twitter</span>
-        </a>
-        <a href="https://www.instagram.com/ethanjurrienenriquez/" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-instagram" style="margin-right: 8px"></i><span class="text-label">Instagram</span>
-        </a>
-        <a href="https://www.pinterest.com/ethanenriquez466/" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-pinterest" style="margin-right: 8px"></i><span class="text-label">Pinterest</span>
-        </a>
-        <a href="https://linktr.ee/Ethanenriquez" target="_blank" rel="noopener noreferrer">
-          <i class="fas fa-link" style="margin-right: 8px"></i><span class="text-label">Linktree</span>
-        </a>
+  <!-- Links Section -->
+  <div id="popupBackgroundBlur"></div>
+  <div id="linkopened" class="popup" role="dialog" aria-modal="true">
+    <button id="closePopup" aria-label="Close Links Popup"></button>
+    <h1 class="popup-title">Links</h1>
+    <div class="popup-links">
+      <a href="https://ko-fi.com/ethanenriquez" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-coffee" style="margin-right: 8px"></i><span class="text-label">Ko-fi</span>
+      </a>
+      <a href="https://www.webtoons.com/p/community/en/u/Ethanenriquez" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-book" style="margin-right: 8px"></i><span class="text-label">Webtoon</span>
+      </a>
+      <a href="https://x.com/ethanenriquez01" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-x-twitter" style="margin-right: 8px"></i><span class="text-label">X/Twitter</span>
+      </a>
+      <a href="https://www.instagram.com/ethanjurrienenriquez/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram" style="margin-right: 8px"></i><span class="text-label">Instagram</span>
+      </a>
+      <a href="https://www.pinterest.com/ethanenriquez466/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-pinterest" style="margin-right: 8px"></i><span class="text-label">Pinterest</span>
+      </a>
+      <a href="https://linktr.ee/Ethanenriquez" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-link" style="margin-right: 8px"></i><span class="text-label">Linktree</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="contactBackground" id="contactBackground">
+    <div class="letters-bg2">
+      <img src="backgroundVector/bigOne.svg" class="letter letter8" alt="Letter 8" />
+      <img src="backgroundVector/vector2.svg" class="letter letter9" alt="Letter 9" />
+      <img src="backgroundVector/vector3.svg" class="letter letter10" alt="Letter 10" />
+      <img src="backgroundVector/vector4.svg" class="letter letter11" alt="Letter 11" />
+      <img src="backgroundVector/vector5.svg" class="letter letter12" alt="Letter 12" />
+      <img src="backgroundVector/vector6.svg" class="letter letter13" alt="Letter 13" />
+      <img src="backgroundVector/vector7.svg" class="letter letter14" alt="Letter 14" />
+    </div>
+    <button id="closeContact" class="backButton" aria-label="Go back"></button>
+    <div class="contactLayer">
+      <div class="contactBorder">
+        <h1 class="contactTitle">Contact me!</h1>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ethanenriquez466@gmail.com" class="contactBtn2"
+          target="_blank" rel="noopener noreferrer">ethanenriquez466@gmail.com</a>
+        <h2 class="timezone">(UTC+12/13)</h2>
       </div>
     </div>
+  </div>
+  </div>
 
-    <!-- Buttons -->
-    <div class="homebuttons">
-      <a href="#myart" class="myart">My Art</a>
-      <a href="#commissionart" class="commissionart">Commission Art</a>
-      <a href="#characterdesign" class="characterdesign">Character Design</a>
-      <a href="#comicseries" class="comicseries">Comic Series</a>
-    </div>
+  <!-- Home Buttons -->
+  <div class="homebuttons">
+    <a href="#myart" class="myart">My Art</a>
+    <a href="#commissionart" class="commissionart">Commission Art</a>
+    <a href="#characterdesign" class="characterdesign">Character Design</a>
+    <a href="#comicseries" class="comicseries">Comic Series</a>
+  </div>
 
-    <!-- Bottom Footer -->
-    <footer class="bottomhead">
-      <span class="version-label">V0.2.5.7.2025</span>
-      <span class="copyright-text">&copy; 2025 EthanEnriquez</span>
-    </footer>
+  <!-- Bottom Footer -->
+  <footer class="bottomhead">
+    <span class="version-label">V0.2.8.7.2025</span>
+    <span class="copyright-text">&copy; 2025 EthanEnriquez</span>
+  </footer>
 
-    <script src="Interactive.js"></script>
+  <script src="Interactive.js"></script>
 </body>
 
 </html>
