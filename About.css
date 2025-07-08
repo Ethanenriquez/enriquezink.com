@@ -43,32 +43,34 @@
 }
 
 .letter2 {
-    bottom: 40%;
-    right: 10%;
+    top: 50%;
+    right: 0;
 }
 
 .letter3 {
-    bottom: 60%;
+    bottom: 30%;
     left: 5%;
 }
 
 .letter4 {
-    top: 0;
-    right: 0;
+    top: 10%;
+    left: 0;
+    transform: scaleX(-1);
 }
 
 .letter5 {
-    bottom: -40%;
+    bottom: 50%;
     left: 20%;
 }
 
 .letter6 {
     top: 0;
-    left: 0;
+    right: 0;
+    transform: scaleX(-1);
 }
 
 .letter7 {
-    top: 60%;
+    bottom: 0;
     left: 0;
 }
 
@@ -86,6 +88,7 @@
     width: 100%;
     height: 100%;
     top: 100px;
+    will-change: backdrop-filter;
     background: linear-gradient(180deg, rgba(217, 217, 217, 0.25), rgba(0, 0, 0, 0));
     backdrop-filter: blur(2px);
     border-top: 2px solid rgba(255, 255, 255, 0.25);
@@ -106,26 +109,29 @@
     transition: 0.75s;
 }
 
-.aboutTH h2:hover {
-    text-shadow:
-        3px 3px 5px rgba(0, 0, 0, 0.25),
-        -3px -3px 5px rgba(255, 255, 255, 0.5);
-    transition: 0.25s;
+.backButton {
+  position: absolute;
+  top: 17px;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.backButton {
-    position: absolute;
-    top: 17px;
-    left: 10px;
-    width: 60px;
-    height: 60px;
-    border: none;
-    cursor: pointer;
-    background: none;
-    z-index: 101;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.backButton.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .backButton::before,
@@ -190,6 +196,8 @@
     border: 2px solid rgba(255, 255, 255, 0.25);
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    touch-action: auto;
+    -webkit-overflow-scrolling: touch;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -245,8 +253,7 @@
     max-width: 1000px;
     margin: auto;
     padding-right: 40px;
-    padding-top: 20px;
-    height: 70vh;
+    height: 72vh;
     overflow-y: auto;
     position: relative;
     mask-image: linear-gradient(to bottom,
@@ -261,9 +268,8 @@
             rgba(0, 0, 0, 0) 100%);
 }
 
-
 .fade p:last-child {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .fade::-webkit-scrollbar {
