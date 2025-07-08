@@ -1,14 +1,3 @@
-# enriquezink.com
-
-This is the source code for my personal website, EnriquezInk.com.  
-Built with HTML, CSS, JS, and hosted on GitHub Pages.
-
-## Live Site  
-<a href="https://ethanenriquez.github.io/enriquezink.com" target="_blank" rel="noopener noreferrer">EnriquezInk.com</a>
-
-## Feedback  
-Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
-
 ## Features (V0.2.8.7.2025)
 Contact Page Added - (Interactive Javascript)
 
