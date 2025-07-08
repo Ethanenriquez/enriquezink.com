@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://ethanenriquez.github.io/</loc></url>
+  <url>
+    <loc>https://enriquezink.com/</loc>
+  </url>
+  <url>
+    <loc>https://enriquezink.com/about</loc>
+  </url>
+  <url>
+    <loc>https://enriquezink.com/contact</loc>
+  </url>
 </urlset>
