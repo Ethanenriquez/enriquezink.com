@@ -4,22 +4,22 @@
 <head>
   <!-- Title -->
   <title>EnriquezInk - Independent Comics & Digital Art</title>
-  <meta name="description" content="EnriquezInk - Independent creator of unique comics and digital art. Explore original graphic novels and artwork." />
-
-  <!-- SEO Description -->
-  <meta name="description" content="EnriquezInk - Independent creator of unique comics and digital art. Explore original graphic novels and artwork." />
+  <meta name="description"
+    content="EnriquezInk - Independent creator of unique comics and digital art. Explore original graphic novels and artwork." />
 
   <!-- Open Graph -->
   <meta property="og:title" content="EnriquezInk - Comics & Digital Art" />
-  <meta property="og:description" content="EnriquezInk - Independent creator of unique comics and digital art. Explore original graphic novels and artwork." />
+  <meta property="og:description"
+    content="EnriquezInk - Independent creator of unique comics and digital art. Explore original graphic novels and artwork." />
   <meta property="og:image" content="https://ethanenriquez.github.io/enriquezink.com/preview-image.jpg" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="EnriquezInk - Comics & Digital Art" />
-  <meta name="twitter:description" content="EnriquezInk - Independent creator of unique comics and digital art. Explore original graphic novels and artwork." />
+  <meta name="twitter:description"
+    content="EnriquezInk - Independent creator of unique comics and digital art. Explore original graphic novels and artwork." />
   <meta name="twitter:image" content="https://ethanenriquez.github.io/enriquezink.com/preview-image.jpg" />
-  
+
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="google99d21a36d5b9c3bb" />
   <link rel="canonical" href="https://ethanenriquez.github.io/enriquezink.com/" />
@@ -32,11 +32,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="Home.css" />
-  <link rel="stylesheet" href="About.css" />
-  <link rel="stylesheet" href="Links.css" />
-  <link rel="stylesheet" href="Contact.css" />
-  <link rel="stylesheet" href="Responsive.css" />
+  <link rel="stylesheet" href="css/Home.css" />
+  <link rel="stylesheet" href="css/About.css" />
+  <link rel="stylesheet" href="css/Links.css" />
+  <link rel="stylesheet" href="css/Contact.css" />
+  <link rel="stylesheet" href="css/MyArt.css" />
+  <link rel="stylesheet" href="css/Responsive.css" />
 </head>
 
 <body>
@@ -77,7 +78,7 @@
       <img src="backgroundVector/vector6.svg" class="letter letter6" alt="Letter 6" />
       <img src="backgroundVector/vector7.svg" class="letter letter7" alt="Letter 7" />
     </div>
-    <button id="closeAbout" class="backButton" aria-label="Go back"></button>
+    <button id="closeAbout" class="backButtonAbout" aria-label="Go back"></button>
     <div class="aboutTH">
       <h2>About Me</h2>
     </div>
@@ -149,7 +150,7 @@
       <img src="backgroundVector/vector6.svg" class="letter letter13" alt="Letter 13" />
       <img src="backgroundVector/vector7.svg" class="letter letter14" alt="Letter 14" />
     </div>
-    <button id="closeContact" class="backButton" aria-label="Go back"></button>
+    <button id="closeContact" class="backButtonContact" aria-label="Go back"></button>
     <div class="contactLayer">
       <div class="contactBorder">
         <h1 class="contactTitle">Contact me!</h1>
@@ -163,10 +164,38 @@
 
   <!-- Home Buttons -->
   <div class="homebuttons">
-    <a href="#myart" class="myart">My Art</a>
-    <a href="#commissionart" class="commissionart">Commission Art</a>
-    <a href="#characterdesign" class="characterdesign">Character Design</a>
-    <a href="#comicseries" class="comicseries">Comic Series</a>
+    <a href="#myart" id="myartBtn" class="myart">My Art</a>
+    <a href="#commissionart" id="commissionartBtn" class="commissionart">Commission Art</a>
+    <a href="#characterdesign" id="characterdesignBtn" class="characterdesign">Character Design</a>
+    <a href="#comicseries" id="comicseriesBtn" class="comicseries">Comic Series</a>
+  </div>
+
+  <!-- My Art Section -->
+  <div class="myartBackground" id="myartBackground">
+    <div class="myartTH">
+      <button id="closeMyArtBtn" class="backButtonMyArt" aria-label="Go back"></button>
+      <h1>My Art</h1>
+    </div>
+    <div class="galleryLayout" id="galleryLayout">
+
+      <div class="galleryItem">
+        <img src="myartFolder/april62025.png" class="galleryImg">
+        <div class="galleryInfo">
+          <p class="galleryTitle">Ezra the Dragon</p>
+          <p class="galleryDate">April 6, 2025</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Preview Popup for My Art, Commission Art, and Character Design -->
+  <div class="myartImgPopup" id="popup">
+    <button id="closeImagePopup" aria-label="Close Image Popup"></button>
+    <img id="popupImg" src="" alt="">
+    <div id="popupInfo">
+      <h2 id="popupTitle"></h2>
+      <p id="popupDate"></p>
+    </div>
   </div>
 
   <!-- Bottom Footer -->
@@ -175,7 +204,25 @@
     <span class="copyright-text">&copy; 2025 EthanEnriquez</span>
   </footer>
 
-  <script src="Interactive.js"></script>
+  <script type="module" src="js/about.js"></script>
+  <script type="module" src="js/links.js"></script>
+  <script type="module" src="js/contact.js"></script>
+  <script type="module" src="js/myart.js"></script>
+
+  <!-- Extension Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navigationLinks = document.querySelectorAll('.navbar .nav-item a');
+      navigationLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          const checkBox = document.getElementById('check');
+          if (checkBox.checked) {
+            checkBox.checked = false;
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
