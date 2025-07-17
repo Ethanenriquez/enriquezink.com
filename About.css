@@ -1,6 +1,6 @@
 /*CODE COMPLETED*/
 
-/*About Page*/
+/*About CSS*/
 .aboutBackground {
     position: fixed;
     top: 0;
@@ -53,8 +53,8 @@
 }
 
 .letter4 {
-    top: 10%;
-    left: 0;
+    top: 5%;
+    left: -300px;
     transform: scaleX(-1);
 }
 
@@ -109,33 +109,33 @@
     transition: 0.75s;
 }
 
-.backButton {
-  position: absolute;
-  top: 17px;
-  left: 10px;
-  width: 60px;
-  height: 60px;
-  border: none;
-  cursor: pointer;
-  background: none;
-  z-index: 101;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+.backButtonAbout {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    z-index: 101;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.backButton.show {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+.backButtonAbout.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
-.backButton::before,
-.backButton::after {
+.backButtonAbout::before,
+.backButtonAbout::after {
     content: '';
     position: absolute;
     width: 30px;
@@ -147,19 +147,19 @@
     transform-origin: center;
 }
 
-.backButton::before {
+.backButtonAbout::before {
     top: 18px;
     left: 15px;
     transform: rotate(-45deg);
 }
 
-.backButton::after {
+.backButtonAbout::after {
     top: 35.5px;
     left: 15px;
     transform: rotate(45deg);
 }
 
-.backButton:hover::before {
+.backButtonAbout:hover::before {
     transform: translateY(-1.6px) translateX(0px) rotate(-45deg) scale(1.2);
     box-shadow:
         3px 3px 5px rgba(0, 0, 0, 0.25),
@@ -167,7 +167,7 @@
     transition: 0.25s;
 }
 
-.backButton:hover::after {
+.backButtonAbout:hover::after {
     transform: translateY(1.6px) translateX(0.4px) rotate(45deg) scale(1.2);
     box-shadow:
         -3px 3px 5px rgba(255, 255, 255, 0.5),
@@ -203,14 +203,6 @@
     pointer-events: none;
     transition: opacity 0.5s ease, visibility 0.5s ease;
     z-index: 100;
-}
-
-.aboutopened::-webkit-scrollbar {
-    width: 10px;
-}
-
-.aboutopened::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .aboutopened.show {
@@ -269,7 +261,7 @@
 }
 
 .fade p:last-child {
-    margin-bottom: 30px;
+    margin-bottom: 100px;
 }
 
 .fade::-webkit-scrollbar {
