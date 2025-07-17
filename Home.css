@@ -1,6 +1,7 @@
 /*CODE COMPLETED*/
-/*Adding more Texture, Background Design and Animation in the Future*/
 
+
+/*Home CSS*/
 /*Animation Startup*/
 @keyframes fadeIn {
     from {
@@ -37,6 +38,10 @@ html {
                 rgba(255, 255, 255, 0.1) 100%);
         font-family: "Inter", sans-serif;
         user-select: none;
+    }
+
+    body {
+        overflow: hidden;
     }
 
     /*EnriquezInk Title*/
@@ -171,7 +176,7 @@ html {
         top: 53%;
         left: 50%;
         transform: translate(-50%, -50%);
-        gap: 20px;
+        gap: 25px;
         z-index: 1;
     }
 
@@ -202,14 +207,14 @@ html {
     /*My Art*/
     .myart {
         color: #508EFF;
-        border: solid 4px #508EFF;
+        outline: solid 4px #508EFF;
         transition: 0.75s;
     }
 
     .myart:hover {
         font-size: 35px;
         color: #FFFFFF;
-        border: solid 4px #FFFFFF;
+        outline: solid 4px #FFFFFF;
         background: #508EFF;
         box-shadow: 0 0 40px #508EFF;
         transition: 0.25s;
@@ -218,14 +223,14 @@ html {
     /*Commission Art*/
     .commissionart {
         color: #FFFFFF;
-        border: solid 4px #FFFFFF;
+        outline: solid 4px #FFFFFF;
         transition: 0.75s;
     }
 
     .commissionart:hover {
         font-size: 35px;
         color: #000000;
-        border: solid 4px #000000;
+        outline: solid 4px #000000;
         background: #FFFFFF;
         box-shadow: 0 0 40px #FFFFFF;
         transition: 0.25s;
@@ -234,14 +239,14 @@ html {
     /*Character Design*/
     .characterdesign {
         color: #FFDC83;
-        border: solid 4px #FFDC83;
+        outline: solid 4px #FFDC83;
         transition: 0.75s;
     }
 
     .characterdesign:hover {
         font-size: 35px;
         color: #FFFFFF;
-        border: solid 4px #FFFFFF;
+        outline: solid 4px #FFFFFF;
         background: #FFDC83;
         box-shadow: 0 0 40px #FFDC83;
         transition: 0.25s;
@@ -250,14 +255,14 @@ html {
     /*Comic Series*/
     .comicseries {
         color: #68FF50;
-        border: solid 4px #68FF50;
+        outline: solid 4px #68FF50;
         transition: 0.75s;
     }
 
     .comicseries:hover {
         font-size: 35px;
         color: #FFFFFF;
-        border: solid 4px #FFFFFF;
+        outline: solid 4px #FFFFFF;
         background: #68FF50;
         box-shadow: 0 0 40px #68FF50;
         transition: 0.25s;
