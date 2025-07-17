@@ -1,0 +1,217 @@
+/*CODE COMPLETED*/
+
+/*Contact CSS*/
+.contactBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(187, 187, 187), rgba(80, 80, 80));
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 90;
+}
+
+.contactBackground.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.letters-bg2 img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  max-width: 1150px;
+  max-height: 1150px;
+  pointer-events: none;
+  filter: blur(2px);
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.letter8 {
+  top: 0;
+  left: 0;
+  transform: scale(-1);
+}
+
+.letter9 {
+  top: 50%;
+  left: 0;
+  transform: scale(-1);
+}
+
+.letter10 {
+  bottom: 30%;
+  right: 5%;
+  transform: scale(-1);
+}
+
+.letter11 {
+  bottom: 10%;
+  left: 0;
+  transform: scale(-1);
+}
+
+.letter12 {
+  top: 50%;
+  left: 20%;
+  transform: scale(-1);
+}
+
+.letter13 {
+  bottom: 0;
+  right: 0;
+  transform: scale(-1);
+}
+
+.letter14 {
+  top: 0;
+  right: 0;
+  transform: scale(-1);
+}
+
+.aboutBackground.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.backButtonContact {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.backButtonContact.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.backButtonContact::before,
+.backButtonContact::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 6px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+  transition: 0.75s;
+  left: 50%;
+  transform-origin: center;
+}
+
+.backButtonContact::before {
+  top: 18px;
+  left: 15px;
+  transform: rotate(-45deg);
+}
+
+.backButtonContact::after {
+  top: 35.5px;
+  left: 15px;
+  transform: rotate(45deg);
+}
+
+.backButtonContact:hover::before {
+  transform: translateY(-1.6px) translateX(0px) rotate(-45deg) scale(1.2);
+  box-shadow:
+    3px 3px 5px rgba(0, 0, 0, 0.25),
+    -3px -3px 5px rgba(255, 255, 255, 0.5);
+  transition: 0.25s;
+}
+
+.backButtonContact:hover::after {
+  transform: translateY(1.6px) translateX(0.4px) rotate(45deg) scale(1.2);
+  box-shadow:
+    -3px 3px 5px rgba(255, 255, 255, 0.5),
+    3px -3px 5px rgba(0, 0, 0, 0.25);
+  transition: 0.25s;
+}
+
+.contactLayer {
+  position: absolute;
+  width: 100%;
+  height: clamp(300px, 35vw, 400px);
+  background: rgba(100, 100, 100, 0.5);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.25),
+    0 -10px 20px rgba(255, 255, 255, 0.25);
+  border: solid 2px rgba(255, 255, 255, 0.15);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contactBorder {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0px 40px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  box-shadow:
+    10px 10px 20px rgba(0, 0, 0, 0.25),
+    -10px -10px 20px rgba(255, 255, 255, 0.25);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 95;
+}
+
+.contactTitle {
+  color: white;
+  font-size: clamp(36px, 4vw, 46px);
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+}
+
+.contactBtn2 {
+  display: inline-block;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: clamp(18px, 3vw, 26px);
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    10px 10px 20px rgba(0, 0, 0, 0.25),
+    -10px -10px 20px rgba(255, 255, 255, 0.25);
+  transition: 0.75s;
+}
+
+.contactBtn2:hover {
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 0 20px #ffffff;
+  transform: scale(1.05);
+  transition: 0.25s;
+}
+
+.timezone {
+  color: white;
+  font-size: 14px;
+  padding-top: 20px;
+}
