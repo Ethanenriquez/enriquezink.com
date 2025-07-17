@@ -4,6 +4,13 @@
 ## Feedback  
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
 
+## Features (V0.2.17.7.2025)
+My Art Page Added - (Interactive Javascript)
+
+Transfered to Folders for Organized and Easy to Find
+
+Bug Fixes
+
 ## Features (V0.2.8.7.2025)
 Contact Page Added - (Interactive Javascript)
 
