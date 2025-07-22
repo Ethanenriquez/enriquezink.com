@@ -82,8 +82,8 @@
 
 .backButtonContact {
   position: absolute;
-  top: 20px;
-  left: 15px;
+  top: 10px;
+  left: 10px;
   width: 60px;
   height: 60px;
   border: none;
@@ -180,7 +180,7 @@
 
 .contactTitle {
   color: white;
-  font-size: clamp(36px, 4vw, 46px);
+  font-size: clamp(36px, 4vw, 64px);
   margin-top: 20px;
   margin-bottom: 0;
   padding-bottom: 15px;
@@ -191,7 +191,7 @@
   padding: 16px;
   background: rgba(0, 0, 0, 0.5);
   color: white;
-  font-size: clamp(18px, 3vw, 26px);
+  font-size: clamp(18px, 3vw, 32px);
   border-radius: 24px;
   text-decoration: none;
   font-weight: bold;
