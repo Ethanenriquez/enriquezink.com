@@ -125,3 +125,10 @@
         font-size: 24px;
     }
 }
+
+@media (max-width: 550px) {
+    
+    .commissionartTH h1 {
+        font-size: 30px;
+    }
+}
