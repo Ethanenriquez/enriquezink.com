@@ -4,6 +4,11 @@
 ## Feedback  
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
 
+## Features (V0.2.22.7.2025)
+Commission Art Page Added - (Interactive Javascript)
+
+Bug Fixes
+
 ## Features (V0.2.17.7.2025)
 My Art Page Added - (Interactive Javascript)
 
