@@ -7,11 +7,12 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(-30deg,
-            rgb(36, 45, 54) 0%,
+    background-color: #252525;
+    background-image: linear-gradient(-30deg,
+            rgb(19, 26, 32) 0%,
             rgb(37, 37, 37) 40%,
             rgb(37, 37, 37) 70%,
-            rgb(80, 80, 80) 100%);
+            rgb(255, 255, 255, 0.1) 100%);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -29,18 +30,20 @@
 
 .myartTH {
     top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.25);
-    border-bottom: solid 2px rgba(255, 255, 255, 0.15);
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25);
-    width: 100%;
-    height: clamp(70px, 15vh, 100px);
-    backdrop-filter: none;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
+        left: 0;
+        border-bottom: solid 2px rgba(255, 255, 255, 0.15);
+        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25);
+        width: 100%;
+        height: clamp(70px, 15vh, 100px);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        padding-left: 20px;
+        box-sizing: border-box;
+        z-index: 30;
     transition: 0.5s;
 }
 
@@ -286,7 +289,7 @@
 #popupImg {
     position: relative;
     max-width: 90%;
-    max-height: 60%;
+    max-height: 65%;
     opacity: 0;
     transition: 0.5s;
     margin-bottom: 80px;
