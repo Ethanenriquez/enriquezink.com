@@ -37,6 +37,7 @@
   <link rel="stylesheet" href="css/Links.css" />
   <link rel="stylesheet" href="css/Contact.css" />
   <link rel="stylesheet" href="css/MyArt.css" />
+  <link rel="stylesheet" href="css/CommissionArt.css">
   <link rel="stylesheet" href="css/Responsive.css" />
 </head>
 
@@ -176,8 +177,9 @@
       <button id="closeMyArtBtn" class="backButtonMyArt" aria-label="Go back"></button>
       <h1>My Art</h1>
     </div>
-    <div class="galleryLayout" id="galleryLayout">
 
+    <!-- Images -->
+    <div class="galleryLayout" id="galleryLayout">
       <div class="galleryItem">
         <img src="myartFolder/april62025.png" class="galleryImg">
         <div class="galleryInfo">
@@ -186,11 +188,36 @@
         </div>
       </div>
     </div>
+
+  </div>
+
+  <!-- Comission Art Section -->
+  <div class="commissionartBackground" id="commissionartBackground">
+    <!--<div class="commissionartTH">-->
+      <button id="closeCommissionArtBtn" class="backButtonCommissionArt"></button>
+      <!--<h1>Commission Art</h1>
+    </div>-->
+
+    <!-- Images -->
+    <!--<div class="galleryLayout2" id="galleryLayout2">
+      <div class="galleryItem2">
+        <img src="Paste Image Here" class="galleryImg2">
+        <div class="galleryInfo2">
+          <p class="galleryTitle2">Title</p>
+          <p class="galleryDate2">Date</p>
+        </div>
+      </div>
+    </div>-->
+
+    <div class="commissionartNotNow">
+      <h1>Soon in the Future</h1>
+    </div>
+
   </div>
 
   <!-- Image Preview Popup for My Art, Commission Art, and Character Design -->
   <div class="myartImgPopup" id="popup">
-    <button id="closeImagePopup" aria-label="Close Image Popup"></button>
+    <button id="closeImagePopup" aria-label="CloseImagePopup"></button>
     <img id="popupImg" src="" alt="">
     <div id="popupInfo">
       <h2 id="popupTitle"></h2>
@@ -200,7 +227,7 @@
 
   <!-- Bottom Footer -->
   <footer class="bottomhead">
-    <span class="version-label">V0.2.17.7.2025</span>
+    <span class="version-label">V0.2.22.7.2025</span>
     <span class="copyright-text">&copy; 2025 EthanEnriquez</span>
   </footer>
 
@@ -208,6 +235,7 @@
   <script type="module" src="js/links.js"></script>
   <script type="module" src="js/contact.js"></script>
   <script type="module" src="js/myart.js"></script>
+  <script type="module" src="js/commissionart.js"></script>
 
   <!-- Extension Script -->
   <script>
