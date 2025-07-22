@@ -201,6 +201,7 @@ html {
 
     .homebuttons a:hover {
         transform: scale(1.05);
+        border-radius: 15px;
         transition: 0.25s;
     }
 
@@ -212,7 +213,6 @@ html {
     }
 
     .myart:hover {
-        font-size: 35px;
         color: #FFFFFF;
         outline: solid 4px #FFFFFF;
         background: #508EFF;
@@ -228,7 +228,6 @@ html {
     }
 
     .commissionart:hover {
-        font-size: 35px;
         color: #000000;
         outline: solid 4px #000000;
         background: #FFFFFF;
@@ -244,7 +243,6 @@ html {
     }
 
     .characterdesign:hover {
-        font-size: 35px;
         color: #FFFFFF;
         outline: solid 4px #FFFFFF;
         background: #FFDC83;
@@ -260,7 +258,6 @@ html {
     }
 
     .comicseries:hover {
-        font-size: 35px;
         color: #FFFFFF;
         outline: solid 4px #FFFFFF;
         background: #68FF50;
