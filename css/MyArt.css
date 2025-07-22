@@ -34,7 +34,7 @@
         border-bottom: solid 2px rgba(255, 255, 255, 0.15);
         box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25);
         width: 100%;
-        height: clamp(70px, 15vh, 100px);
+        height: 80px;
         backdrop-filter: blur(10px);
         position: fixed;
         display: flex;
@@ -61,7 +61,7 @@
 
 .backButtonMyArt {
     position: absolute;
-    left: 15px;
+    left: 10px;
     width: 60px;
     height: 60px;
     border: none;
@@ -133,7 +133,7 @@
     transform: translateX(-50%);
     width: 100%;
     max-width: 1200px;
-    padding-top: 40px;
+    padding-top: 20px;
     padding-bottom: 40px;
     padding-left: 40px;
     padding-right: 40px;
@@ -351,8 +351,8 @@
     pointer-events: auto;
     border: none;
     cursor: pointer;
-    top: 30px;
-    right: 30px;
+    top: 10px;
+    right: 10px;
     width: 45px;
     height: 45px;
     padding: 0;
