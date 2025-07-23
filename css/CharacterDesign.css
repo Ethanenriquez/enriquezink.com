@@ -1,0 +1,124 @@
+/*Character Design CSS*/
+.characterdesignBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #252525;
+  background-image: linear-gradient(-30deg,
+      rgb(255, 213, 107, 0.25) 0%,
+      rgb(37, 37, 37) 40%,
+      rgb(37, 37, 37) 70%,
+      rgb(255, 255, 255, 0.15) 100%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.5s;
+  overflow-x: hidden;
+  z-index: 90;
+}
+
+.characterdesignBackground.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: 0.5s;
+}
+
+.characterdesignTH {
+  top: 0;
+  left: 0;
+  border-bottom: solid 2px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 80px;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  z-index: 30;
+  transition: 0.5s;
+}
+
+.characterdesignTH h1 {
+  position: absolute;
+  color: white;
+  font-size: 40px;
+  white-space: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.backButtonCharacterDesign {
+  position: absolute;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.backButtonCharacterDesign.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.backButtonCharacterDesign::before,
+.backButtonCharacterDesign::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 6px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+  transition: 0.75s;
+  left: 50%;
+  transform-origin: center;
+}
+
+.backButtonCharacterDesign::before {
+  top: 18px;
+  left: 15px;
+  transform: rotate(-45deg);
+}
+
+.backButtonCharacterDesign::after {
+  top: 35.5px;
+  left: 15px;
+  transform: rotate(45deg);
+}
+
+.backButtonCharacterDesign:hover::before {
+  transform: translateY(-1.6px) translateX(0px) rotate(-45deg) scale(1.2);
+  background-color: rgb(255, 249, 235);
+  box-shadow:
+    0 0 20px rgb(255, 243, 209),
+    3px 3px 5px rgba(0, 0, 0, 0.25),
+    -2px -2px 5px rgba(255, 255, 255, 0.25);
+  transition: 0.25s;
+}
+
+.backButtonCharacterDesign:hover::after {
+  transform: translateY(1.6px) translateX(0.4px) rotate(45deg) scale(1.2);
+  background-color: rgb(255, 249, 235);
+  box-shadow:
+    0 0 20px rgb(255, 243, 209),
+    -2px 1px 5px rgba(255, 255, 255, 0.25),
+    3px -3px 5px rgba(0, 0, 0, 0.25);
+  transition: 0.25s;
+}

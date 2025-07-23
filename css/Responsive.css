@@ -1,0 +1,111 @@
+/*CODE COMPLETED*/
+
+/*Responsive CSS*/
+@media (max-width: 550px) {
+
+    /*Menu*/
+    .hamburger {
+        display: block;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 98.5%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(20, 20, 20, 0.95);
+        overflow: hidden;
+        transform: translateZ(0);
+        opacity: 0;
+        transition: 0.5s ease-out;
+        z-index: 20;
+    }
+
+    #check:checked~.navbar {
+        border-radius: 0 0 20px 20px;
+        border-bottom: solid 2px rgba(255, 255, 255, 0.15);
+        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25);
+        height: 250px;
+        opacity: 1;
+    }
+
+    .nav-item a {
+        font-size: 30px;
+        margin-top: 20px;
+        opacity: 0;
+    }
+
+    #check:checked~.navbar .nav-item a {
+        opacity: 1;
+    }
+
+    /*Links*/
+    .popup {
+        width: 70vw;
+    }
+
+    .popup a {
+        width: 110px;
+        height: 110px;
+        gap: 0;
+    }
+
+    .popup a i {
+        font-size: 40px;
+    }
+
+    .popup a .text-label {
+        display: none;
+    }
+
+    /*About*/
+    .aboutopened {
+        width: 100%;
+        height: 100%;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+
+    .aboutopened p {
+        width: 90%;
+        max-width: 350px;
+        margin: 20px auto 20px 7%;
+        text-align: left;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        line-height: 1.6;
+    }
+
+    .fade p:last-child {
+        margin-bottom: 100px;
+    }
+
+    /*Contact*/
+    .contactBorder {
+        width: 101%;
+        border-radius: 0;
+    }
+
+    /*My Art*/
+    .galleryOverlay {
+        width: calc(100% + 2.3px);
+    }
+
+    .commissionartTH h1 {
+        font-size: 30px;
+    }
+
+    .commissionartNotNow {
+        top: 50%;
+        padding: 20px 30px;
+    }
+
+    .commissionartNotNow h1 {
+        font-size: 32px;
+    }
+}
