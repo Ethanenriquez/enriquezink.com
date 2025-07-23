@@ -44,6 +44,52 @@ document.addEventListener('DOMContentLoaded', () => {
         popupTitle.textContent = title;
         popupDate.textContent = date;
         popup.classList.add('show');
+        setTimeout(() => {
+            popupImg.classList.add('loaded');
+        }, 50);
+    }
+
+    function closePopup() {
+        popup.classList.remove('show');
+        setTimeout(() => {
+            popupImg.src = '';
+            popupImg.classList.remove('loaded');
+        }, 500);
+    }
+
+    if (closePopupBtn) {
+        closePopupBtn.addEventListener('click', closePopup);
+    }
+
+    // Add gallery click functionality when gallery is implemented
+    const galleryLayout2 = document.getElementById('galleryLayout2');
+    if (galleryLayout2) {
+        galleryLayout2.addEventListener('click', (e) => {
+            if (e.target.classList.contains('galleryImg2')) {
+                const galleryItem = e.target.closest('.galleryItem2');
+                const title = galleryItem.querySelector('.galleryTitle2').textContent;
+                const date = galleryItem.querySelector('.galleryDate2').textContent;
+                openPopup(e.target.src, title, date);
+            }
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (popup.classList.contains('show')) {
+                closePopup();
+            } else if (commissionartBackground.classList.contains('show')) {
+                closeCommissionArt();
+            }
+        }
+    });
+
+    function openPopup(src, title, date) {
+        popupImg.classList.remove('loaded');
+        popupImg.src = src;
+        popupTitle.textContent = title;
+        popupDate.textContent = date;
+        popup.classList.add('show');
     }
 
     function closePopup() {
