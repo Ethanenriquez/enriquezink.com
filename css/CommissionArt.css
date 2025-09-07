@@ -7,45 +7,6 @@
     left: 0;
     height: 100%;
     width: 100%;
-<<<<<<< HEAD
-=======
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(20px);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: 0.5s;
-    overflow-x: hidden;
-    z-index: 90;
-}
-
-.commissionartNotNow {
-    position: fixed;
-    top: 45%;
-    left: 50%;
-    padding: 30px 110px;
-    background: rgb(255, 255, 255, 0.1);
-    border: solid 2px rgba(255, 255, 255, 0.15);
-    border-radius: 20px;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    user-select: none;
-    white-space: nowrap;
-    pointer-events: none;
-}
-
-.commissionartNotNow h1 {
-    color: white;
-    font-size: 36px;
-}
-
-/*.commissionartBackground {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
->>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
     background-color: #252525;
     background-image: linear-gradient(-30deg,
             rgba(255, 255, 255, 0.1) 0%,
@@ -58,11 +19,7 @@
     transition: 0.5s;
     overflow-x: hidden;
     z-index: 90;
-<<<<<<< HEAD
 }
-=======
-}*/
->>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
 
 .commissionartBackground.show {
     opacity: 1;
@@ -226,21 +183,10 @@
     box-shadow:
         5px 5px 20px rgb(255, 255, 255, 0.25),
         -5px -5px 20px rgba(255, 255, 255, 0.25);
-<<<<<<< HEAD
     opacity: 1;
     transition: 0.75s;
 }
 
-=======
-    opacity: 0;
-    transition: 0.75s;
-}
-
-.galleryImg2.loaded {
-    opacity: 1;
-}
-
->>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
 .galleryImg2:hover {
     border-radius: 10px;
     outline: 8px solid rgba(255, 255, 255, 0.1);
@@ -308,12 +254,8 @@
     margin: 0;
 }
 
-<<<<<<< HEAD
 /*Commission Art Image Popup*/
 .commissionArtImgPopup {
-=======
-.myartImgPopup {
->>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
     position: fixed;
     top: 0;
     left: 0;
@@ -331,22 +273,14 @@
     pointer-events: none;
 }
 
-<<<<<<< HEAD
 .commissionArtImgPopup.show {
-=======
-.myartImgPopup.show {
->>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
     transition: 0.5s;
 }
 
-<<<<<<< HEAD
 #CommissionArtPopupImg {
-=======
-#popupImg {
->>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
     position: relative;
     max-width: 90%;
     max-height: 65%;
@@ -362,26 +296,15 @@
     z-index: 400;
 }
 
-<<<<<<< HEAD
 #CommissionArtPopupInfo {
-=======
-#popupInfo {
->>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
     position: absolute;
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
-<<<<<<< HEAD
     background: rgba(255, 255, 255, 0.05);
     border: solid 2px rgba(255, 255, 255, 0.05);
     box-shadow: 0 -5px 10px rgba(115, 130, 159, 0.35);
     padding: 10px 40px;
-=======
-    background: rgb(255, 255, 255, 0.05);
-    border: solid 2px rgba(255, 255, 255, 0.05);
-    box-shadow: 0 -5px 10px rgba(115, 130, 159, 0.35);
-    padding: 10px 40px 10px 40px;
->>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
     border-radius: 10px;
     max-width: 80%;
     color: white;
@@ -391,11 +314,7 @@
     z-index: 600;
 }
 
-<<<<<<< HEAD
 #CommissionArtPopupTitle {
-=======
-#popupTitle {
->>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
     margin: 0;
     font-weight: 700;
     font-size: 1.5rem;
@@ -406,30 +325,18 @@
     transition: 0.5s;
 }
 
-<<<<<<< HEAD
 #CommissionArtPopupDate {
-=======
-#popupDate {
->>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
     margin: 0;
     font-size: 1rem;
     opacity: 0.8;
     transition: 0.5s;
 }
 
-<<<<<<< HEAD
 .commissionArtImgPopup.show #CommissionArtPopupImg[src]:not([src=""]) {
     opacity: 1;
 }
 
 #closeCommissionArtPopup {
-=======
-.myartImgPopup.show #popupImg[src]:not([src=""]) {
-    opacity: 1;
-}
-
-#closeImagePopup {
->>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
     display: flex;
     align-items: center;
     justify-content: center;
@@ -438,13 +345,8 @@
     pointer-events: auto;
     border: none;
     cursor: pointer;
-<<<<<<< HEAD
     top: 17px;
     right: 20px;
-=======
-    top: 30px;
-    right: 30px;
->>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
     width: 45px;
     height: 45px;
     padding: 0;
@@ -453,13 +355,8 @@
     z-index: 500;
 }
 
-<<<<<<< HEAD
 #closeCommissionArtPopup::before,
 #closeCommissionArtPopup::after {
-=======
-#closeImagePopup::before,
-#closeImagePopup::after {
->>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
     content: "";
     position: absolute;
     width: 45px;
@@ -469,7 +366,6 @@
     transition: 0.75s;
 }
 
-<<<<<<< HEAD
 #closeCommissionArtPopup::before {
     transform: rotate(45deg);
 }
@@ -484,34 +380,11 @@
     box-shadow:
         0 0 30px rgba(139, 178, 255, 1),
         -2px -2px 8px rgba(255, 255, 255, 0.25),
-=======
-#closeImagePopup::before {
-    transform: rotate(45deg);
-}
-
-#closeImagePopup::after {
-    transform: rotate(-45deg);
-}
-
-#closeImagePopup:hover::before,
-#closeImagePopup:hover::after {
-    background-color: #ffffff;
-    box-shadow:
-        0 0 30px rgb(139, 178, 255),
-        -2px -2px 8px rgb(255, 255, 255, 0.25),
->>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
         2px 2px 5px rgba(255, 255, 255, 0.25);
     transition: 0.25s;
 }
 
-<<<<<<< HEAD
 #closeCommissionArtPopup:hover {
     transform: rotate(90deg) scale(1.2);
     transition: 0.5s;
 }
-=======
-#closeImagePopup:hover {
-    transform: rotate(90deg) scale(1.2);
-    transition: 0.5s;
-}
->>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
