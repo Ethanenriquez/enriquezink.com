@@ -4,20 +4,31 @@
 ## Feedback  
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
 
+## Features (V0.9.7.9.2025)
+Everything Updated
+
+Character Design Page Added
+
+Comic Series Page Added
+
+Bigger Changes
+
+Massive Bug Fixes
+
 ## Features (V0.2.22.7.2025)
-Commission Art Page Added - (Interactive Javascript)
+Commission Art Page Added
 
 Bug Fixes
 
 ## Features (V0.2.17.7.2025)
-My Art Page Added - (Interactive Javascript)
+My Art Page Added
 
 Transfered to Folders for Organized and Easy to Find
 
 Bug Fixes
 
 ## Features (V0.2.8.7.2025)
-Contact Page Added - (Interactive Javascript)
+Contact Page Added
 
 Bug Fixes
 
@@ -27,7 +38,7 @@ About Page updated with additional details and improved arrangement for better r
 Bug Fixes
 
 ## Features (V0.1.28.6.2025)
-About Page Added - (Interactive Javascript)
+About Page Added
 
 CSS Files Separated for easy to find and some Files are Completed
 
@@ -41,7 +52,7 @@ Bug Fixes
 ## Features (V0.1.21.6.2025)
 Simple Startup Animation - (Opacity only) {V0.0.17.6.2025 caused buggy for some reason}
 
-Links Pop-up added - (Interactive Javascript)
+Links Pop-up added
 
 Additional small details
 
