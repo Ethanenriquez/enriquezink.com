@@ -14,11 +14,6 @@
 
 body {
     animation: fadeIn 2s;
-    overflow-x: hidden;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 /*Home Page*/
@@ -26,21 +21,21 @@ html {
 
     body,
     html {
+        width: 100%;
         min-height: 100%;
-        height: auto;
         margin: 0;
+        padding: 0;
         background-color: #252525;
         background-image: linear-gradient(-30deg,
                 rgba(255, 220, 131, 0.25) 0%,
                 rgb(37, 37, 37) 40%,
                 rgb(37, 37, 37) 70%,
                 rgba(255, 255, 255, 0.1) 100%);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-attachment: fixed;
         font-family: "Inter", sans-serif;
         user-select: none;
-    }
-
-    body {
-        overflow: hidden;
     }
 
     /*EnriquezInk Title*/
@@ -172,9 +167,12 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
-        top: 53%;
+        width: 100%;
+        height: 100%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateX(-50%);
+        padding-top: 120px;
+        box-sizing: border-box;
         gap: 25px;
         z-index: 1;
     }
@@ -207,7 +205,7 @@ html {
     /*My Art*/
     .myart {
         color: #508EFF;
-        outline: solid 4px #508EFF;
+        outline: solid 2px #508EFF;
         transition: 0.75s;
     }
 
@@ -222,7 +220,7 @@ html {
     /*Commission Art*/
     .commissionart {
         color: #FFFFFF;
-        outline: solid 4px #FFFFFF;
+        outline: solid 2px #FFFFFF;
         transition: 0.75s;
     }
 
@@ -237,7 +235,7 @@ html {
     /*Character Design*/
     .characterdesign {
         color: #FFDC83;
-        outline: solid 4px #FFDC83;
+        outline: solid 2px #FFDC83;
         transition: 0.75s;
     }
 
@@ -252,7 +250,7 @@ html {
     /*Comic Series*/
     .comicseries {
         color: #68FF50;
-        outline: solid 4px #68FF50;
+        outline: solid 2px #68FF50;
         transition: 0.75s;
     }
 

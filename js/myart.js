@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const myartBtn = document.getElementById('myartBtn');
   const myartBackground = document.getElementById('myartBackground');
   const closeMyArtBtn = document.getElementById('closeMyArtBtn');
-  const popup = document.getElementById('popup');
-  const closePopupBtn = document.getElementById('closeImagePopup');
-  const popupImg = document.getElementById('popupImg');
-  const popupTitle = document.getElementById('popupTitle');
-  const popupDate = document.getElementById('popupDate');
+
+  const popup = document.getElementById('myartpopup');
+  const closePopupBtn = document.getElementById('closeArtPopup');
+  const popupImg = document.getElementById('artPopupImg');
+  const popupTitle = document.getElementById('artPopupTitle');
+  const popupDate = document.getElementById('artPopupDate');
 
   function openMyArt() {
     myartBackground.classList.add('show');
@@ -17,19 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function closeMyArt() {
-    myartBackground.classList.remove('show');
-    closeMyArtBtn.classList.remove('show');
-  }
+  myartBackground.classList.remove('show');
+  closeMyArtBtn.classList.remove('show');
+}
 
   function openPopup(src, title, date) {
     popupImg.classList.remove('loaded');
-    popupImg.src = src;
     popupTitle.textContent = title;
     popupDate.textContent = date;
     popup.classList.add('show');
-    setTimeout(() => {
-      popupImg.classList.add('loaded');
-    }, 50);
+    popupImg.onload = () => {
+        popupImg.classList.add('loaded');
+    };
+    popupImg.src = src;
   }
 
   function closePopup() {
@@ -40,13 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
   }
 
-  myartBtn.addEventListener('click', (e) => {
+  myartBtn?.addEventListener('click', (e) => {
     e.preventDefault();
     openMyArt();
   });
 
-  closeMyArtBtn.addEventListener('click', closeMyArt);
-  closePopupBtn.addEventListener('click', closePopup);
+  closeMyArtBtn?.addEventListener('click', closeMyArt);
+  closePopupBtn?.addEventListener('click', closePopup);
 
   document.getElementById('galleryLayout').addEventListener('click', (e) => {
     if (e.target.classList.contains('galleryImg')) {
@@ -54,6 +55,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const title = galleryItem.querySelector('.galleryTitle').textContent;
       const date = galleryItem.querySelector('.galleryDate').textContent;
       openPopup(e.target.src, title, date);
+    }
+  });
+
+  const popupBackground = document.querySelector('.myartImgPopup');
+
+  popupBackground.addEventListener('click', (e) => {
+    if (e.target === popupBackground) {
+      closePopup();
     }
   });
 

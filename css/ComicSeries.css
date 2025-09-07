@@ -1,0 +1,663 @@
+/*CODE COMPLETED*/
+
+/*Comic Series CSS*/
+.comicseriesBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(43, 73, 39);
+    background-image: linear-gradient(-30deg,
+            rgb(113, 195, 101, 0.25) 0%,
+            rgb(43, 73, 39) 40%,
+            rgb(43, 73, 39) 70%,
+            rgb(251, 255, 250, 0.15) 100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 500;
+}
+
+.comicseriesBackground.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.comicseriesTH {
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid rgb(158, 255, 143, 0.15);
+    box-shadow: 0 20px 20px rgb(255, 255, 255, 0.05);
+    width: 100%;
+    height: 80px;
+    background: rgb(92, 122, 87, 0.15);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    z-index: 50;
+    transition: 0.5s;
+}
+
+.comicseriesTH h1 {
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.backButtonComicSeries {
+    position: absolute;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    z-index: 101;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.backButtonComicSeries.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.backButtonComicSeries::before,
+.backButtonComicSeries::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 6px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    transition: 0.75s;
+    left: 50%;
+    transform-origin: center;
+}
+
+.backButtonComicSeries::before {
+    top: 18px;
+    left: 15px;
+    transform: rotate(-45deg);
+}
+
+.backButtonComicSeries::after {
+    top: 35.5px;
+    left: 15px;
+    transform: rotate(45deg);
+}
+
+.backButtonComicSeries:hover::before {
+    transform: translateY(-1.6px) translateX(0px) rotate(-45deg) scale(1.2);
+    background-color: rgb(241, 255, 240);
+    box-shadow:
+        0 0 20px rgb(167, 255, 153),
+        3px 3px 5px rgba(0, 0, 0, 0.25),
+        -2px -2px 5px rgba(255, 255, 255, 0.25);
+    transition: 0.25s;
+}
+
+.backButtonComicSeries:hover::after {
+    transform: translateY(1.6px) translateX(0.4px) rotate(45deg) scale(1.2);
+    background-color: rgb(241, 255, 240);
+    box-shadow:
+        0 0 20px rgb(167, 255, 153),
+        -2px 1px 5px rgba(255, 255, 255, 0.25),
+        3px -3px 5px rgba(0, 0, 0, 0.25);
+    transition: 0.25s;
+}
+
+.comicseriesFilterBlur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    backdrop-filter: blur(2px);
+    background: transparent;
+    z-index: 30;
+}
+
+.comicseriesVectors {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.comicseriesVectors img {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    pointer-events: none;
+}
+
+.comicVector1 {
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.comicVector2 {
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.comicVector3 {
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.comicseriesTab {
+    position: fixed;
+    height: 70%;
+    max-height: 600px;
+    width: 40%;
+    max-width: 230px;
+    top: 52%;
+    left: 50%;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background: rgb(20, 39, 17, 0.15);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgb(158, 255, 143, 0.15);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow:
+        5px 5px 20px rgba(0, 0, 0, 0.25),
+        -5px -5px 20px rgba(255, 255, 255, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 40;
+    transition: 0.75s
+}
+
+.comicseriesImg {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border: 1px solid rgb(158, 255, 143, 0.15);
+    border-radius: 10px 20px 5px 5px;
+    -webkit-user-drag: none;
+    user-select: none;
+    transition: 0.75s;
+}
+
+.comicseriesTab h2 {
+    color: white;
+    border-bottom: 1px solid rgb(158, 255, 143, 0.1);
+    font-size: 24px;
+    margin: 0;
+    padding: 6px;
+    text-align: center;
+}
+
+.comicseriesDesc {
+    height: 100%;
+    width: 100%;
+    background: rgb(180, 255, 168, 0.025);
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    transition: 0.75s;
+
+    mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 1) 90%,
+            rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 1) 90%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+.comicseriesDesc::-webkit-scrollbar {
+    width: 6px;
+}
+
+.comicseriesDesc::-webkit-scrollbar-thumb {
+    background: rgba(158, 255, 143, 0.15);
+    border-radius: 8px;
+}
+
+.comicseriesDesc::-webkit-scrollbar-thumb:hover {
+    background: rgba(158, 255, 143, 0.3);
+}
+
+.comicseriesDesc p {
+    color: white;
+    width: 100%;
+    font-size: 14px;
+    margin: 0;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.comicseriesLinks {
+    padding-top: 6px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.comicseriesLinks a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 6px;
+    border: 1px solid rgb(158, 255, 143, 0);
+    border-radius: 5px 5px 0 5px;
+    box-shadow:
+        2px 2px 8px rgba(0, 0, 0, 0.25),
+        -2px -2px 8px rgba(255, 255, 255, 0.25);
+    transition: 0.75s;
+}
+
+.comicseriesLinks i {
+    font-size: 12px;
+}
+
+.comicseriesLinks a:hover {
+    color: rgb(203, 255, 199);
+    background: rgba(167, 255, 153, 0.25);
+    border: 1px solid rgb(158, 255, 143, 0.25);
+    box-shadow:
+        0 0 20px rgb(167, 255, 153);
+    transform: scale(1.05);
+}
+
+.comicseriesTab:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    background: rgb(66, 120, 58, 0.35);
+    border: 2px solid rgb(158, 255, 143, 0.35);
+    border-radius: 20px;
+    box-shadow:
+        0 0 30px rgba(158, 255, 143, 0.35);
+    transition: 0.25s;
+    cursor: default;
+}
+
+.comicseriesTab:hover .comicseriesImg {
+    border-radius: 10px 10px 5px 5px;
+    transition: 0.25s;
+}
+
+.comicseriesTab:hover .comicseriesLinks a {
+    border-radius: 5px 5px 10px 5px;
+    transition: 0.25s;
+}
+
+/*Comic Series Open*/
+.comicseriesPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgb(40, 40, 40, 0.75) 0%,
+            rgba(0, 0, 0, 0.75) 25%,
+            rgba(0, 0, 0, 0.75) 75%,
+            rgb(32, 52, 29, 0.75) 100%);
+    backdrop-filter: blur(30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 600;
+}
+
+.comicseriesPopup.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.comicseriesLayoutPopup {
+    width: 100%;
+    height: 100%;
+    min-width: 600px;
+    max-width: 1100px;
+    border-left: solid 2px rgb(215, 255, 209, 0.15);
+    border-right: solid 2px rgba(215, 255, 209, 0.15);
+    box-shadow: 0 0 40px rgba(158, 255, 143, 0.35);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px 40px 20px;
+}
+
+/*Left Object*/
+.comicseriesPopupObject1 {
+    width: auto;
+    height: 100%;
+    max-height: 1600px;
+    background: linear-gradient(to right,
+            rgba(158, 255, 143, 0.05) 0%,
+            rgba(158, 255, 143, 0.05) 70%,
+            transparent 100%);
+    border-bottom: 2px solid rgba(158, 255, 143, 0.05);
+    border-left: 1px solid rgba(158, 255, 143, 0.05);
+    border-radius: 10px 0 0 10px;
+    box-shadow:
+        0 10px 10px rgba(158, 255, 143, 0.1),
+        0 -10px 10px rgb(251, 255, 250, 0.1);
+    padding: 10px 10px 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    transition: 0.75s;
+}
+
+.comicseriesPopupObject1:hover {
+    box-shadow:
+    0 10px 10px rgba(158, 255, 143, 0.15),
+    0 -10px 10px rgb(251, 255, 250, 0.15);
+    transition: 0.5s;
+}
+
+.comicseriesImgPopup {
+    width: 15vw;
+    min-width: 240px;
+    max-width: 340px;
+    height: auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    border: 1px solid rgb(158, 255, 143, 0.15);
+    border-radius: 5px;
+    box-shadow:
+        0 0 20px rgb(0, 0, 0, 0.25);
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.comicseriesTitlePopup {
+    color: white;
+    width: 100%;
+    border-bottom: 1px solid rgb(158, 255, 143, 0.1);
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+.comicseriesDescPopup {
+    width: 15vw;
+    height: 100%;
+    min-width: 240px;
+    max-width: 340px;
+    background: transparent;
+    border-radius: 5px;
+    padding-left: 4px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+.comicseriesDescPopup::-webkit-scrollbar {
+    width: 6px;
+}
+
+.comicseriesDescPopup::-webkit-scrollbar-thumb {
+    background: rgba(158, 255, 143, 0.15);
+    border-radius: 8px;
+}
+
+.comicseriesDescPopup::-webkit-scrollbar-thumb:hover {
+    background: rgba(158, 255, 143, 0.3);
+}
+
+.comicseriesDescPopup p {
+    color: white;
+    width: 100%;
+    font-size: 14px;
+    margin: 0;
+    text-align: left;
+    line-height: 1.5;
+}
+
+/*For Desktop Responsive*/
+.comicseriesLinksLayoutPopup1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    gap: 10px;
+    background: transparent;
+    border-top: 1px solid rgb(158, 255, 143, 0.1);
+}
+
+.readonLinks1 {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+}
+
+.comicseriesLinksPopup1 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.comicseriesLinksPopup1 a {
+    display: inline-flex;
+    gap: 6px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px;
+    background: rgba(167, 255, 153, 0.05);
+    border: 1px solid rgb(158, 255, 143, 0.05);
+    border-radius: 5px;
+    box-shadow:
+        0 2px 8px rgba(158, 255, 143, 0.15),
+        0 -2px 8px rgba(255, 255, 255, 0.15);
+    transition: 0.75s;
+}
+
+.comicseriesLinksPopup1 i {
+    font-size: 16px;
+}
+
+.comicseriesLinksPopup1 a:hover {
+    color: rgb(203, 255, 199);
+    background: rgba(167, 255, 153, 0.25);
+    border: 1px solid rgb(158, 255, 143, 0.25);
+    box-shadow:
+        0 0 20px rgb(167, 255, 153);
+    transform: scale(1.05);
+    transition: 0.25s;
+}
+
+/*Right Object*/
+.comicseriesPopupObject2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    max-height: 1600px;
+    background: transparent;
+    border-bottom: 2px solid rgba(158, 255, 143, 0.05);
+    border-right: 1px solid rgba(158, 255, 143, 0.05);
+    border-radius: 0 10px 10px 0;
+    box-shadow:
+    0 10px 10px rgba(158, 255, 143, 0.1),
+    0 -10px 10px rgb(251, 255, 250, 0.1);
+    padding: 10px 10px 5px 10px;
+    gap: 5px;
+    box-sizing: border-box;
+    transition: 0.75s;
+}
+
+.comicseriesPopupObject2:hover {
+    box-shadow:
+    0 10px 10px rgba(158, 255, 143, 0.15),
+    0 -10px 10px rgb(251, 255, 250, 0.15);
+    transition: 0.5s;
+}
+
+.comicseriesPreviewTitle {
+    color: white;
+    width: 100%;
+    border-bottom: 1px solid rgb(158, 255, 143, 0.1);
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+.comicseriesPreview {
+    width: 100%;
+    height: auto;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-bottom: 50px;
+    background: transparent;
+    justify-items: center;
+    align-items: flex-start;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 1) 90%,
+            rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 1) 90%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+.comicseriesPreview::-webkit-scrollbar {
+  width: 8px;
+}
+
+.comicseriesPreview::-webkit-scrollbar-thumb {
+  background: rgb(193, 255, 184, 0.25);
+  border-radius: 10px;
+}
+
+.comicseriesPreview::-webkit-scrollbar-thumb:hover {
+  background: rgb(202, 255, 194, 0.35);
+}
+
+.comicseriesPreviewImg {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgb(158, 255, 143, 0.15);
+    border-radius: 5px;
+    box-shadow:
+        0 0 20px rgb(0, 0, 0, 0.25);
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+/*For Mobile Responsive*/
+.readonLinks2 {
+    display: none;
+}
+
+.comicseriesLinksPopup2.webtoon{
+    display: none;
+}
+
+#closeComicSeriesTabPopup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    transform-origin: center;
+    transition: 0.75s ease-out;
+    z-index: 500;
+}
+
+#closeComicSeriesTabPopup::before,
+#closeComicSeriesTabPopup::after {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 6px;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    transition: 0.75s;
+}
+
+#closeComicSeriesTabPopup::before {
+    transform: rotate(45deg);
+}
+
+#closeComicSeriesTabPopup::after {
+    transform: rotate(-45deg);
+}
+
+#closeComicSeriesTabPopup:hover::before,
+#closeComicSeriesTabPopup:hover::after {
+    background-color: rgb(241, 255, 240);
+    box-shadow:
+        0 0 30px rgb(167, 255, 153),
+        -2px -2px 8px rgb(255, 255, 255, 0.25),
+        2px 2px 5px rgba(255, 255, 255, 0.25);
+    transition: 0.25s;
+}
+
+#closeComicSeriesTabPopup:hover {
+    transform: rotate(90deg) scale(1.2);
+    transition: 0.5s;
+}
