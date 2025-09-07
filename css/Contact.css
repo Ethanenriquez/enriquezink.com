@@ -10,6 +10,7 @@
   background: linear-gradient(180deg, rgba(187, 187, 187), rgba(80, 80, 80));
   opacity: 0;
   visibility: hidden;
+<<<<<<< HEAD
   transition: opacity 0.5s ease, visibility 0.5s ease;
   z-index: 90;
 }
@@ -77,6 +78,11 @@
 .letter14 {
   top: 0;
   right: 0;
+=======
+  pointer-events: none;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 90;
+>>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
 }
 
 .contactBackground.open {
@@ -85,6 +91,62 @@
   pointer-events: auto;
 }
 
+<<<<<<< HEAD
+=======
+.letters-bg2 img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  max-width: 1150px;
+  max-height: 1150px;
+  pointer-events: none;
+  filter: blur(2px);
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.letter8 {
+  top: 0;
+  left: 0;
+  transform: scale(-1);
+}
+
+.letter9 {
+  top: 50%;
+  left: 0;
+  transform: scale(-1);
+}
+
+.letter10 {
+  bottom: 30%;
+  right: 5%;
+  transform: scale(-1);
+}
+
+.letter11 {
+  bottom: 10%;
+  left: 0;
+  transform: scale(-1);
+}
+
+.letter12 {
+  top: 50%;
+  left: 20%;
+  transform: scale(-1);
+}
+
+.letter13 {
+  bottom: 0;
+  right: 0;
+  transform: scale(-1);
+}
+
+.letter14 {
+  top: 0;
+  right: 0;
+  transform: scale(-1);
+}
+
+>>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
 .aboutBackground.show {
   opacity: 1;
   visibility: visible;
@@ -160,7 +222,11 @@
 .contactLayer {
   position: absolute;
   width: 100%;
+<<<<<<< HEAD
   height: 250px;
+=======
+  height: clamp(300px, 35vw, 400px);
+>>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
   background: rgba(100, 100, 100, 0.5);
   box-shadow:
     0 10px 20px rgba(0, 0, 0, 0.25),
@@ -168,8 +234,12 @@
   border: solid 2px rgba(255, 255, 255, 0.15);
   top: 50%;
   left: 50%;
+<<<<<<< HEAD
   transform: translate(-50%, -50%);
   z-index: 100;
+=======
+  transform: translate(-50%, -50%);
+>>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
 }
 
 .contactBorder {
@@ -180,7 +250,11 @@
   padding: 0px 40px;
   background: rgba(0, 0, 0, 0.3);
   border: 2px solid rgba(255, 255, 255, 0.15);
+<<<<<<< HEAD
   border-radius: 20px;
+=======
+  border-radius: 30px;
+>>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
   box-shadow:
     10px 10px 20px rgba(0, 0, 0, 0.25),
     -10px -10px 20px rgba(255, 255, 255, 0.25);
@@ -192,22 +266,38 @@
 
 .contactTitle {
   color: white;
+<<<<<<< HEAD
   font-size: 32px;
+=======
+  font-size: clamp(36px, 4vw, 64px);
+>>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
   margin-top: 20px;
   margin-bottom: 0;
   padding-bottom: 15px;
 }
 
+<<<<<<< HEAD
 .contactBtn2 {
+=======
+.contactBtn2 {
+>>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
   display: inline-block;
   padding: 16px;
   background: rgba(0, 0, 0, 0.5);
   color: white;
+<<<<<<< HEAD
   font-size: 24px;
   border-radius: 20px;
   text-decoration: none;
   font-weight: bold;
   border: 1px solid rgba(255, 255, 255, 0.15);
+=======
+  font-size: clamp(18px, 3vw, 32px);
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+>>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
   box-shadow:
     10px 10px 20px rgba(0, 0, 0, 0.25),
     -10px -10px 20px rgba(255, 255, 255, 0.25);
@@ -216,10 +306,15 @@
 
 .contactBtn2:hover {
   background: #ffffff;
+<<<<<<< HEAD
   color: #000000;
   border: 1px solid rgb(0, 0, 0);
   box-shadow: 0 0 20px #ffffff;
   border-radius: 15px;
+=======
+  color: #000000;
+  box-shadow: 0 0 20px #ffffff;
+>>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
   transform: scale(1.05);
   transition: 0.25s;
 }
@@ -228,4 +323,8 @@
   color: white;
   font-size: 14px;
   padding-top: 20px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e4bb22d29c56d0a0fae9e4ca3ff62de093a732b3
