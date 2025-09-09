@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Homepage -->
   <url>
     <loc>https://ethanenriquez.github.io/enriquezink.com/</loc>
     <lastmod>2025-09-07T09:53:43+00:00</lastmod>
   </url>
-
-  <!-- Character Design page -->
-  <url>
-    <loc>https://ethanenriquez.github.io/enriquezink.com/character-design</loc>
-    <lastmod>2025-09-07T09:53:43+00:00</lastmod>
-  </url>
-
-  <!-- Comics page -->
-  <url>
-    <loc>https://ethanenriquez.github.io/enriquezink.com/comic-series</loc>
-    <lastmod>2025-09-07T09:53:43+00:00</lastmod>
-  </url>
-
-  <!-- Commission Art page -->
-  <url>
-    <loc>https://ethanenriquez.github.io/enriquezink.com/commission-art</loc>
-    <lastmod>2025-09-07T09:53:43+00:00</lastmod>
-  </url>
-
 </urlset>
