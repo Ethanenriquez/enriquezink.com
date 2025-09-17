@@ -5,24 +5,24 @@
   <!-- Title -->
   <title>EnriquezInk - Creator of Comics & Digital Art</title>
   <meta name="description"
-    content="EnriquezInk - creator of comics and digital art. Explore my original graphic novels and artwork." />
+    content="EnriquezInk – creator of comics, character designs, and digital art. Explore original graphic novels and artwork." />
 
   <!-- Open Graph -->
   <meta property="og:title" content="EnriquezInk - Comics & Digital Art" />
   <meta property="og:description"
-    content="EnriquezInk - Independent creator of unique comics and digital art. Explore original graphic novels and artwork." />
-  <meta property="og:image" content="https://ethanenriquez.github.io/enriquezink.com/preview-image.jpg" />
+    content="EnriquezInk - Independent creator of comics and digital art. Explore original graphic novels and artwork." />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="EnriquezInk - Comics & Digital Art" />
   <meta name="twitter:description"
-    content="EnriquezInk - Independent creator of unique comics and digital art. Explore original graphic novels and artwork." />
-  <meta name="twitter:image" content="https://ethanenriquez.github.io/enriquezink.com/preview-image.jpg" />
+    content="EnriquezInk - Independent creator of comics and digital art. Explore original graphic novels and artwork." />
 
   <!-- Google Site Verification -->
-  <meta name="google-site-verification" content="google99d21a36d5b9c3bb" />
   <link rel="canonical" href="https://ethanenriquez.github.io/enriquezink.com/" />
+  <meta name="google-site-verification" content="google99d21a36d5b9c3bb" />
+  <meta name="robots" content="index, follow" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
   <!-- Device Size -->
   <meta charset="UTF-8" />
@@ -41,6 +41,23 @@
   <link rel="stylesheet" href="css/CharacterDesign.css" />
   <link rel="stylesheet" href="css/ComicSeries.css" />
   <link rel="stylesheet" href="css/Responsive.css" />
+
+  <!-- Structured Data for Google -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "EnriquezInk",
+      "url": "https://ethanenriquez.github.io/enriquezink.com/",
+      "description": "EnriquezInk – creator of comics, character designs, and digital art. Explore original graphic novels and artwork.",
+      "image": "https://ethanenriquez.github.io/enriquezink.com/april62025.png",
+      "author": {
+        "@type": "Person",
+        "name": "Ethan Enriquez",
+        "url": "https://ethanenriquez.github.io/enriquezink.com/"
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -81,13 +98,14 @@
       <img src="myartVector/vector6.svg" class="letter6" alt="Letter 6" />
       <img src="myartVector/vector7.svg" class="letter7" alt="Letter 7" />
     </div>
+    <div class="noiseTexture1"></div>
     <button id="closeAbout" class="backButtonAbout" aria-label="Go back"></button>
     <div class="aboutTH">
       <h2>About Me</h2>
     </div>
     <section id="aboutopened" class="aboutopened">
       <div class="fade">
-        
+
         <p>
           Hi! I'm <strong>Ethan</strong> (pronouns: he/him), born in 2007 in
           Cebu City. I'm a beginner <strong>comic publisher</strong>.
@@ -120,14 +138,15 @@
             rel="noopener noreferrer">GitHub</a>
           Issues!
         </p>
-        
+
       </div>
     </section>
   </div>
 
   <!-- Links Section -->
   <div id="popupBackgroundBlur"></div>
-  <div id="linkopened" class="popup" role="dialog" aria-modal="true">
+  <div id="noiseTexture2"></div>
+  <div id="linkopened" class="popup">
     <button id="closePopup" aria-label="Close Links Popup"></button>
     <h1 class="popup-title">Links</h1>
     <div class="popup-links">
@@ -164,6 +183,7 @@
       <img src="contactVector/vector13.svg" class="letter13" alt="letter 13" />
       <img src="contactVector/vector14.svg" class="letter14" alt="letter 14" />
     </div>
+    <div class="noiseTexture3"></div>
     <button id="closeContact" class="backButtonContact" aria-label="Go back"></button>
     <div class="contactLayer">
       <div class="contactBorder">
@@ -179,7 +199,7 @@
   <div class="homebuttons">
     <a href="#myart" id="myartBtn" class="myart">My Art</a>
     <!--<a href="#commissionart" id="commissionartBtn" class="commissionart">Commission Art</a>-->
-    <a href="#characterdesign" id="characterdesignBtn" class="characterdesign">Character Design</a>
+    <!--<a href="#characterdesign" id="characterdesignBtn" class="characterdesign">Character Design</a>-->
     <a href="#comicseries" id="comicseriesBtn" class="comicseries">Comic Series</a>
   </div>
 
@@ -259,6 +279,7 @@
 
     <!-- Layout -->
     <div class="characterLayout">
+
       <!-- Characters -->
       <button class="characterButton" data-character="Ezekiel">
         <div class="imageEzekiel characterImage"></div>
@@ -365,6 +386,7 @@
       <img src="comicseriesVector/comicVector2.svg" class="comicVector2" alt="Comic Vector 2" />
       <img src="comicseriesVector/comicVector3.svg" class="comicVector3" alt="Comic Vector 3" />
     </div>
+    <div class="noiseTexture4"></div>
     <div class="comicseriesTH">
       <button id="closeComicSeriesBtn" class="backButtonComicSeries"></button>
       <h1>Comic Series</h1>
@@ -455,7 +477,7 @@
 
   <!-- Bottom Footer -->
   <footer class="bottomhead">
-    <span class="version-label">V0.9.7.9.2025</span>
+    <span class="version-label">V0.9.5.9.2025</span>
     <span class="copyright-text">&copy; 2025 EthanEnriquez</span>
   </footer>
 

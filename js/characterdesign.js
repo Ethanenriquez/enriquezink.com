@@ -25,6 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   closeCharDesignBtn.addEventListener('click', closeCharDesign);
 
+  // Mouse Wheel Scroll Horizontally
+  const characterLayout = document.querySelector('.characterLayout');
+
+  if (characterLayout) {
+    characterLayout.addEventListener('wheel', (e) => {
+      if (characterLayout.scrollWidth > characterLayout.clientWidth) {
+        e.preventDefault();
+        characterLayout.scrollLeft += e.deltaY;
+      }
+    }, { passive: false });
+  }
+
   function isMobile() {
     return window.matchMedia("(max-width: 550px)").matches;
   }
@@ -41,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.style.borderRadius = '2px';
       btn.style.opacity = '1';
       btn.style.transition = '0.2s';
-      btn.style.transform = mobile ? 'scale(1.1)' : 'scale(1.1) skew(-10deg)';
+      btn.style.transform = mobile ? 'scale(1.05)' : 'scale(1.08) skew(-10deg)';
 
       // Skew all character images on desktop
       document.querySelectorAll('.characterImage').forEach(img => {

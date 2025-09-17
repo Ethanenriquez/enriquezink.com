@@ -9,10 +9,14 @@
     width: 100%;
     background-color: #252525;
     background-image: linear-gradient(-30deg,
-            rgb(43, 60, 74) 0%,
-            rgb(37, 37, 37) 40%,
-            rgb(37, 37, 37) 70%,
-            rgb(255, 255, 255, 0.1) 100%);
+            rgba(96, 184, 255, 0.25) 0%,
+            rgba(37, 37, 37, 0.75) 40%,
+            rgba(37, 37, 37, 0.75) 70%,
+            rgba(255, 255, 255, 0.1) 100%),
+            url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 700' width='700' height='700' opacity='0.1'><defs><filter id='nnnoise-filter' x='-20%' y='-20%' width='140%' height='140%' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='linearRGB'><feTurbulence type='fractalNoise' baseFrequency='0.2' numOctaves='4' seed='15' stitchTiles='stitch' x='0%' y='0%' width='100%' height='100%' result='turbulence'></feTurbulence><feSpecularLighting surfaceScale='11' specularConstant='0.9' specularExponent='20' lighting-color='%23ffffff' x='0%' y='0%' width='100%' height='100%' in='turbulence' result='specularLighting'><feDistantLight azimuth='3' elevation='103'></feDistantLight></feSpecularLighting></filter></defs><rect width='700' height='700' fill='transparent'></rect><rect width='700' height='700' fill='%23ffffff' filter='url(%23nnnoise-filter)'></rect></svg>");
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -54,7 +58,7 @@
 .myartTH h1 {
     position: absolute;
     color: white;
-    font-size: 30px;
+    font-size: 40px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -142,7 +146,7 @@
 
 .galleryLayout {
     position: absolute;
-    top: clamp(70px, 15vh, 100px);
+    top: 80px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -277,6 +281,7 @@
     width: 100%;
     height: 100%;
     background: rgb(0, 0, 0, 0.75);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 700' width='700' height='700' opacity='0.1'><defs><filter id='nnnoise-filter' x='-20%' y='-20%' width='140%' height='140%' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='linearRGB'><feTurbulence type='fractalNoise' baseFrequency='0.2' numOctaves='4' seed='15' stitchTiles='stitch' x='0%' y='0%' width='100%' height='100%' result='turbulence'></feTurbulence><feSpecularLighting surfaceScale='11' specularConstant='0.9' specularExponent='20' lighting-color='%23ffffff' x='0%' y='0%' width='100%' height='100%' in='turbulence' result='specularLighting'><feDistantLight azimuth='3' elevation='103'></feDistantLight></feSpecularLighting></filter></defs><rect width='700' height='700' fill='transparent'></rect><rect width='700' height='700' fill='%23ffffff' filter='url(%23nnnoise-filter)'></rect></svg>");
     backdrop-filter: blur(10px);
     opacity: 0;
     visibility: hidden;

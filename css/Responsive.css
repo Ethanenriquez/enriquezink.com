@@ -21,6 +21,7 @@
         background-color: rgba(20, 20, 20, 0.95);
         overflow: hidden;
         transform: translateZ(0);
+        gap: 20px;
         opacity: 0;
         transition: 0.5s ease-out;
         z-index: 20;
@@ -36,8 +37,20 @@
 
     .nav-item a {
         font-size: 30px;
-        margin-top: 20px;
+        background: rgba(255, 255, 255, 0);
+        border: 1px transparent;
+        box-shadow: none;
         opacity: 0;
+    }
+
+    .nav-item a:hover,
+    .nav-item a:focus-visible {
+        transform: scale(1.1);
+        color: #FFF4DB;
+        box-shadow: none;
+        border: 1px transparent;
+        border-radius: 5px;
+        transition: 0.25s
     }
 
     #check:checked~.navbar .nav-item a {
@@ -47,8 +60,6 @@
     /*About*/
     .aboutopened {
         width: 100%;
-        height: calc(100vh - 260px);
-        box-sizing: border-box;
     }
 
     .aboutopened p {
@@ -58,10 +69,6 @@
         word-wrap: break-word;
         overflow-wrap: break-word;
         line-height: 1.6;
-    }
-
-    .fade p:last-child {
-        margin-bottom: 100px;
     }
 
     /*Links*/
@@ -117,15 +124,6 @@
         font-size: 30px;
     }
 
-    .commissionartNotNow {
-        top: 50%;
-        padding: 20px 30px;
-    }
-
-    .commissionartNotNow h1 {
-        font-size: 32px;
-    }
-
     /*Character Design*/
     .characterdesignTH h1 {
         font-size: 30px;
@@ -133,27 +131,17 @@
     }
 
     .characterLayout {
-        justify-content: center;
-        overflow-x: auto;
-        overflow-y: hidden;
-        height: 100%;
-        padding: 0 50px 0 50px;
-        box-sizing: border-box;
-        gap: 20px;
-        -webkit-overflow-scrolling: touch;
+        padding: 0 80px 0 80px;
+        gap: 40px
     }
 
-    .characterButton:hover {
-        transform: none;
-    }
-
-    .characterName {
-        transform: translate(-50%, -50%) skew(0deg);
-    }
-
-    .characterName:hover {
-        transform: translate(-50%, -50%) skew(0deg);
-        cursor: default;
+    .characterButton {
+        width: 90%;
+        min-width: 200px;
+        max-width: 400px;
+        min-height: 300px;
+        max-height: 800px;
+        margin-bottom: 20px;
     }
 
     .characterLayoutPopup {
@@ -168,7 +156,7 @@
     .comicseriesTH h1 {
         font-size: 30px;
     }
-    
+
     .comicseriesTab {
         position: fixed;
         width: 220px;
@@ -209,15 +197,15 @@
         gap: 40px;
 
         mask-image: linear-gradient(to bottom,
-            rgba(0, 0, 0, 1) 0%,
-            rgba(0, 0, 0, 1) 10%,
-            rgba(0, 0, 0, 1) 90%,
-            rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-image: linear-gradient(to bottom,
-            rgba(0, 0, 0, 1) 0%,
-            rgba(0, 0, 0, 1) 10%,
-            rgba(0, 0, 0, 1) 90%,
-            rgba(0, 0, 0, 0) 100%);
+                rgba(0, 0, 0, 1) 0%,
+                rgba(0, 0, 0, 1) 10%,
+                rgba(0, 0, 0, 1) 90%,
+                rgba(0, 0, 0, 0) 100%);
+        -webkit-mask-image: linear-gradient(to bottom,
+                rgba(0, 0, 0, 1) 0%,
+                rgba(0, 0, 0, 1) 10%,
+                rgba(0, 0, 0, 1) 90%,
+                rgba(0, 0, 0, 0) 100%);
     }
 
     .comicseriesPreviewImg {
@@ -237,7 +225,7 @@
         border-bottom: 2px solid rgba(255, 255, 255, 0.15);
     }
 
-    .comicseriesLinksPopup2.webtoon{
+    .comicseriesLinksPopup2.webtoon {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
