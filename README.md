@@ -4,6 +4,13 @@
 ## Feedback  
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
 
+## Features (V0.9.18.9.2025)
+Small Details Added
+
+Refinements
+
+Bug Fixes
+
 ## Features (V0.9.7.9.2025)
 Everything Updated
 
