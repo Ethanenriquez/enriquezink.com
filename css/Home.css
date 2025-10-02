@@ -1,17 +1,6 @@
 /*CODE COMPLETED*/
 
 /*Home CSS*/
-/*Animation Startup*/
-.startupAnimation {
-    opacity: 0;
-    transition: opacity 2s ease;
-}
-
-.startupAnimation.active {
-    opacity: 1;
-}
-
-/*Home Page*/
 body,
 html {
     position: fixed;

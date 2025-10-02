@@ -102,8 +102,8 @@
     }
 
     /*My Art*/
-    .galleryOverlay {
-        width: calc(100% + 2.3px);
+    .myartMask {
+        top: 80px;
     }
 
     .myartImgLayoutPopup {
@@ -116,7 +116,10 @@
 
     #artPopupImg {
         max-height: 50%;
-        margin-bottom: 60px;
+    }
+
+    #artPopupInfo {
+        bottom: 10%;
     }
 
     /*Commission Art*/

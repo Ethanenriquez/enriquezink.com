@@ -13,7 +13,7 @@
             rgba(37, 37, 37, 0.75) 40%,
             rgba(37, 37, 37, 0.75) 70%,
             rgba(255, 255, 255, 0.1) 100%),
-            url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 700' width='700' height='700' opacity='0.1'><defs><filter id='nnnoise-filter' x='-20%' y='-20%' width='140%' height='140%' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='linearRGB'><feTurbulence type='fractalNoise' baseFrequency='0.2' numOctaves='4' seed='15' stitchTiles='stitch' x='0%' y='0%' width='100%' height='100%' result='turbulence'></feTurbulence><feSpecularLighting surfaceScale='11' specularConstant='0.9' specularExponent='20' lighting-color='%23ffffff' x='0%' y='0%' width='100%' height='100%' in='turbulence' result='specularLighting'><feDistantLight azimuth='3' elevation='103'></feDistantLight></feSpecularLighting></filter></defs><rect width='700' height='700' fill='transparent'></rect><rect width='700' height='700' fill='%23ffffff' filter='url(%23nnnoise-filter)'></rect></svg>");
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 700' width='700' height='700' opacity='0.1'><defs><filter id='nnnoise-filter' x='-20%' y='-20%' width='140%' height='140%' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='linearRGB'><feTurbulence type='fractalNoise' baseFrequency='0.2' numOctaves='4' seed='15' stitchTiles='stitch' x='0%' y='0%' width='100%' height='100%' result='turbulence'></feTurbulence><feSpecularLighting surfaceScale='11' specularConstant='0.9' specularExponent='20' lighting-color='%23ffffff' x='0%' y='0%' width='100%' height='100%' in='turbulence' result='specularLighting'><feDistantLight azimuth='3' elevation='103'></feDistantLight></feSpecularLighting></filter></defs><rect width='700' height='700' fill='transparent'></rect><rect width='700' height='700' fill='%23ffffff' filter='url(%23nnnoise-filter)'></rect></svg>");
     background-repeat: repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -130,40 +130,14 @@
     transition: 0.25s;
 }
 
-.galleryShadow {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 1200px;
-    height: 100%;
-    background: transparent;
-    box-shadow:
-        0 0 40px rgba(168, 199, 255, 0.35);
-    pointer-events: none;
-    z-index: 1;
-}
-
-.galleryLayout {
-    position: absolute;
+.myartMask {
+    position: relative;
     top: 80px;
-    left: 50%;
-    transform: translateX(-50%);
     width: 100%;
-    max-width: 1200px;
-    padding: 40px;
-    border-left: solid 2px rgba(138, 179, 255, 0.15);
-    border-right: solid 2px rgba(138, 179, 255, 0.15);
-    box-shadow:
-        20px 0 20px rgba(0, 0, 0, 1),
-        -20px 0 20px rgba(0, 0, 0, 1);
-    margin: 0 auto;
-    max-height: calc(100vh - clamp(70px, 15vh, 100px) - 0px);
     overflow-y: auto;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    grid-gap: 30px;
+    overflow-x: hidden;
+    height: calc(100vh - 80px);
+
     mask-image: linear-gradient(to bottom,
             rgba(0, 0, 0, 0) 0%,
             rgba(0, 0, 0, 1) 5%,
@@ -174,27 +148,46 @@
             rgba(0, 0, 0, 1) 5%,
             rgba(0, 0, 0, 1) 95%,
             rgba(0, 0, 0, 0) 100%);
+}
+
+.galleryLayout {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+    margin: 0 auto;
+    gap: 30px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-auto-rows: auto;
+    border-left: solid 2px rgba(138, 179, 255, 0.1);
+    border-right: solid 2px rgba(138, 179, 255, 0.1);
+    border-radius: 0 0 20px 20px;
+    box-shadow:
+        0 0 40px rgba(165, 196, 255, 0.25);
     z-index: 2;
 }
 
-.galleryLayout::-webkit-scrollbar {
+.myartMask::-webkit-scrollbar {
     width: 10px;
 }
 
-.galleryLayout::-webkit-scrollbar-thumb {
+.myartMask::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.25);
     border-radius: 10px;
 }
 
-.galleryLayout::-webkit-scrollbar-thumb:hover {
+.myartMask::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.5);
 }
 
 .galleryImg {
     width: 100%;
+    height: 100%;
     aspect-ratio: 1.7;
     border-radius: 20px;
-    outline: 2px solid rgba(138, 179, 255, 0.25);
+    border: 2px solid rgba(138, 179, 255, 0.25);
     object-fit: cover;
     cursor: pointer;
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.25) 0%, rgba(200, 200, 200, 0.25) 70%, rgba(150, 150, 150, 0.25) 100%);
@@ -208,8 +201,7 @@
 }
 
 .galleryImg:hover {
-    border-radius: 10px;
-    outline: 10px solid rgb(255, 255, 255, 0.1);
+    border-radius: 15px;
     transform: scale(1.05);
     box-shadow:
         0 0 50px rgba(80, 142, 255, 0.35),
@@ -220,14 +212,15 @@
 
 .galleryItem {
     position: relative;
-    text-align: center;
     border-radius: 20px;
+    display: block;
 }
 
 .galleryInfo {
     position: absolute;
     top: 50%;
-    left: 50.5%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
     width: 90%;
     height: 100px;
     background: rgba(0, 0, 0, 0.5);
@@ -237,6 +230,7 @@
         0 5px 10px rgba(0, 0, 0, 0.5),
         0 -5px 10px rgb(255, 255, 255, 0.25);
     border-radius: 10px;
+    border-radius: inherit;
     backdrop-filter: blur(1px);
     visibility: hidden;
     opacity: 0;
@@ -245,7 +239,6 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    transform: translate(-50%, -50%) scale(1);
     box-sizing: border-box;
     color: white;
     text-align: center;
@@ -301,6 +294,7 @@
     position: fixed;
     height: 100%;
     width: 60%;
+    min-width: 500px;
     max-width: 1000px;
     display: flex;
     justify-content: center;
@@ -333,7 +327,7 @@
 
 #artPopupInfo {
     position: absolute;
-    bottom: 5%;
+    bottom: 6%;
     background: rgb(255, 255, 255, 0.05);
     border: solid 2px rgba(255, 255, 255, 0.05);
     box-shadow: 0 -5px 10px rgba(115, 130, 159, 0.35);

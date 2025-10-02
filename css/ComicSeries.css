@@ -432,7 +432,7 @@
     color: white;
     width: 100%;
     border-bottom: 1px solid rgb(158, 255, 143, 0.1);
-    font-size: 30px;
+    font-size: 28px;
     margin: 0;
     padding-bottom: 8px;
     text-align: center;
@@ -545,7 +545,6 @@
     0 10px 10px rgba(158, 255, 143, 0.1),
     0 -10px 10px rgb(251, 255, 250, 0.1);
     padding: 10px 10px 5px 10px;
-    gap: 5px;
     box-sizing: border-box;
     transition: 0.75s;
 }
@@ -558,9 +557,9 @@
 }
 
 .comicseriesPreviewTitle {
+    position: relative;
     color: white;
     width: 100%;
-    border-bottom: 1px solid rgb(158, 255, 143, 0.1);
     font-size: 30px;
     margin: 0;
     padding-bottom: 8px;
@@ -570,11 +569,12 @@
 .comicseriesPreview {
     width: 100%;
     height: auto;
-    padding-right: 10px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+    padding-top: 5px;
     padding-bottom: 50px;
+    padding-right: 10px;
     background: transparent;
     justify-items: center;
     align-items: flex-start;

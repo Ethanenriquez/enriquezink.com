@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const aboutPopup = document.getElementById('aboutBackground');
   const aboutCloseBtn = document.getElementById('closeAbout');
   const aboutContent = document.getElementById('aboutopened');
+  const aboutLayer = document.getElementById('aboutLayer');
 
   function disableScroll() {
     document.body.style.overflow = 'hidden';
@@ -20,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutPopup.classList.add('show');
     aboutContent.classList.add('show');
     aboutCloseBtn.classList.add('show');
+    aboutLayer.classList.remove('hide');
+    aboutLayer.classList.add('show');
     disableScroll();
   }
 
@@ -27,11 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
   function hideAbout() {
     aboutPopup.classList.remove('show');
     aboutContent.classList.remove('show');
+    aboutLayer.classList.remove('show');
+    aboutLayer.classList.add('hide');
     aboutCloseBtn.classList.remove('show');
     enableScroll();
   }
 
-  if (aboutBtn && aboutPopup && aboutCloseBtn && aboutContent) {
+  if (aboutBtn && aboutPopup && aboutCloseBtn && aboutContent && aboutLayer) {
     aboutBtn.addEventListener('click', e => {
       e.preventDefault();
       showAbout();
