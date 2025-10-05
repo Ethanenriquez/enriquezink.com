@@ -4,6 +4,13 @@
 ## Feedback  
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
 
+## Features (V1.5.10.2025)
+Small Arrangement Layout
+
+Small Bug Fixes
+
+This is the full version of website
+
 ## Features (V0.9.2.10.2025)
 Navbar Animation Added
 

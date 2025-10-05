@@ -299,7 +299,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(184, 209, 255, 0.05);
+    background: rgb(184, 209, 255, 0.1);
+    backdrop-filter: blur(10px);
     border-left: 2px solid rgba(184, 209, 255, 0.15);
     border-right: 2px solid rgba(184, 209, 255, 0.15);
     box-shadow: 0 0 40px rgba(184, 209, 255, 0.35);
@@ -319,6 +320,8 @@
     box-shadow:
         0 0 50px rgba(139, 180, 255, 0.35),
         0 0 25px rgba(255, 255, 255, 0.2);
+    -webkit-user-drag: none;
+    user-select: none;
 }
 
 #artPopupImg.loaded {
@@ -328,7 +331,7 @@
 #artPopupInfo {
     position: absolute;
     bottom: 6%;
-    background: rgb(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.1);
     border: solid 2px rgba(255, 255, 255, 0.05);
     box-shadow: 0 -5px 10px rgba(115, 130, 159, 0.35);
     padding: 10px 40px 10px 40px;

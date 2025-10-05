@@ -490,7 +490,7 @@
   <!-- Add Comic Series Popup here -->
 
   <!-- The Footer -->
-  <span class="version-label">V0.9.2.10.2025</span>
+  <span class="version-label">V0.9.5.10.2025</span>
   <span class="copyright-text">&copy; 2025 EthanEnriquez</span>
 
   <script type="module" src="js/about.js"></script>
@@ -515,6 +515,13 @@
           }
         });
       });
+    });
+
+    // Disable right-click on images
+    document.addEventListener('contextmenu', event => {
+      if (event.target.tagName === 'IMG') {
+        event.preventDefault();
+      }
     });
   </script>
 </body>
