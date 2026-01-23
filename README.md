@@ -4,7 +4,10 @@
 ## Feedback  
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
 
-## Features (V1.5.10.2025)
+## Features (V0.9.22.1.2026)
+Small Redesign Layout (Home)
+
+## Features (V0.9.5.10.2025)
 Small Arrangement Layout
 
 Small Bug Fixes
