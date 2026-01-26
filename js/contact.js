@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     contactBorder.style.left = '50%';
 
     disableScroll();
+
+    history.pushState({ page: 'contact' }, '', '#contact');
   }
 
   function hideContact() {
