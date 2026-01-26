@@ -3,53 +3,96 @@
 /*Responsive CSS*/
 @media (max-width: 550px) {
 
-    /*Menu*/
+    /*Menu Visible*/
     .hamburger {
         display: block;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.75s;
+    }
+
+    .hamburger .line {
+        display: block;
+        width: 45px;
+        height: 6px;
+        background-color: #FFFFFF;
+        margin-right: 10px;
+        margin-block: 10px;
+        border-radius: 6px;
+        transition:
+            background-color 0.8s,
+            box-shadow 0.8s,
+            transform 0.5s,
+            opacity 0.25s;
+    }
+
+    .hamburger:hover .line,
+    .hamburger:focus-visible .line {
+        background-color: #FFF4DB;
+        box-shadow:
+            0 0 20px rgba(255, 255, 255, 0.5);
+        transition: 0.25s;
+    }
+
+    .hamburger:hover {
+        transform: scale(1.2);
+        transition: 0.25s;
+    }
+
+    #check:checked+.hamburger .line:nth-child(1) {
+        transform: translateY(16px) rotate(45deg);
+    }
+
+    #check:checked+.hamburger .line:nth-child(2) {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    #check:checked+.hamburger .line:nth-child(3) {
+        transform: translateY(-16px) rotate(-45deg);
     }
 
     .navbar {
         position: fixed;
-        top: 80px;
+        top: 0;
         left: 0;
         width: 100%;
-        height: 0;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        background-color: rgba(20, 20, 20, 0.95);
+        justify-content: start;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        border-radius: 150% 0 0 150%;
+        border-left: 100px solid rgba(255, 255, 255, 0.15);
         overflow: hidden;
         transform: translateZ(0);
+        transform: translateX(100%);
         gap: 20px;
+        padding-top: 100px;
         opacity: 0;
-        transition: 0.5s ease-out;
+        transition: 0.5s ease;
         z-index: 20;
     }
 
     #check:checked~.navbar {
-        border-radius: 0 0 20px 20px;
-        border-bottom: solid 2px rgba(255, 255, 255, 0.15);
-        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25);
-        height: 250px;
+        transform: translateX(0);
+        border-radius: 0;
+        border-left: 0px solid rgba(255, 255, 255, 0.15);
         opacity: 1;
     }
 
     .nav-item a {
         font-size: 30px;
-        background: rgba(255, 255, 255, 0);
-        border: 1px transparent;
-        box-shadow: none;
         opacity: 0;
     }
 
-    .nav-item a:hover,
-    .nav-item a:focus-visible {
+    .nav-item a:hover {
         transform: scale(1.1);
-        color: #FFF4DB;
-        box-shadow: none;
-        border: 1px transparent;
-        border-radius: 5px;
+        backdrop-filter: blur(0);
         transition: 0.25s
     }
 

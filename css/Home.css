@@ -53,61 +53,14 @@ html {
     transition: 0.25s;
 }
 
-/*Menu Logo*/
+/*Menu Invisible*/
 #check {
     display: none;
 }
 
 .hamburger {
     display: none;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: 0.75s;
-}
-
-.hamburger .line {
-    display: block;
-    width: 45px;
-    height: 6px;
-    background-color: #FFFFFF;
-    margin-right: 10px;
-    margin-block: 10px;
-    border-radius: 6px;
-    transition:
-        background-color 0.8s,
-        box-shadow 0.8s,
-        transform 0.5s,
-        opacity 0.25s;
-}
-
-.hamburger:hover .line,
-.hamburger:focus-visible .line {
-    background-color: #FFF4DB;
-    box-shadow:
-        0 0 30px #FFFFFF,
-        2px 2px 8px rgba(0, 0, 0, 1),
-        -2px -2px 5px rgba(255, 255, 255, 0.5);
-    transition: 0.25s;
-}
-
-.hamburger:hover {
-    transform: scale(1.2);
-    transition: 0.25s;
-}
-
-#check:checked+.hamburger .line:nth-child(1) {
-    transform: translateY(16px) rotate(45deg);
-}
-
-#check:checked+.hamburger .line:nth-child(2) {
-    transform: scaleX(0);
-    opacity: 0;
-}
-
-#check:checked+.hamburger .line:nth-child(3) {
-    transform: translateY(-16px) rotate(-45deg);
+    z-index: 30;
 }
 
 /*Navigation*/
@@ -132,8 +85,7 @@ html {
     transition: 0.75s;
 }
 
-.nav-item a:hover,
-.nav-item a:focus-visible {
+.nav-item a:hover{
     color: #FFF4DB;
     box-shadow:
         0 0 18px rgba(255, 241, 195, 0.5);

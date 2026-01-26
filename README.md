@@ -4,6 +4,15 @@
 ## Feedback  
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
 
+## Features (V0.9.26.1.2026)
+Small Redesign Layout and Back button Removed (About)
+
+Back Button Removed (Contact)
+
+Redesign Navigation Bar (Responsive Mobile)
+
+Hover Rotation Exit Button Removed (Links)
+
 ## Features (V0.9.22.1.2026)
 Small Redesign Layout (Home)
 

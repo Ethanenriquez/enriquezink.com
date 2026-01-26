@@ -4,7 +4,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const aboutBtn = document.getElementById('aboutbtn');
   const aboutPopup = document.getElementById('aboutBackground');
-  const aboutCloseBtn = document.getElementById('closeAbout');
   const aboutContent = document.getElementById('aboutopened');
   const aboutLayer = document.getElementById('aboutLayer');
 
@@ -16,33 +15,41 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
-  // Function to show about section
   function showAbout() {
     aboutPopup.classList.add('show');
     aboutContent.classList.add('show');
-    aboutCloseBtn.classList.add('show');
     aboutLayer.classList.remove('hide');
     aboutLayer.classList.add('show');
     disableScroll();
+
+    history.pushState({ page: 'about' }, '', '#about');
   }
 
-  // Function to hide about section
-  function hideAbout() {
+  function hideAbout(fromPopState = false) {
     aboutPopup.classList.remove('show');
     aboutContent.classList.remove('show');
     aboutLayer.classList.remove('show');
     aboutLayer.classList.add('hide');
-    aboutCloseBtn.classList.remove('show');
     enableScroll();
+
+    if (!fromPopState) {
+      history.back();
+    }
   }
 
-  if (aboutBtn && aboutPopup && aboutCloseBtn && aboutContent && aboutLayer) {
+  window.addEventListener('popstate', (e) => {
+    if (!e.state || e.state.page !== 'about') {
+      if (aboutPopup.classList.contains('show')) {
+        hideAbout(true);
+      }
+    }
+  });
+
+  if (aboutBtn && aboutPopup && aboutContent && aboutLayer) {
     aboutBtn.addEventListener('click', e => {
       e.preventDefault();
       showAbout();
     });
-
-    aboutCloseBtn.addEventListener('click', hideAbout);
 
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && aboutPopup.classList.contains('show')) {
