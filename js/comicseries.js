@@ -9,83 +9,83 @@ document.addEventListener('DOMContentLoaded', () => {
   const comicPopup = document.getElementById('comicseriesPopup');
   const closePopupBtn = document.getElementById('closeComicSeriesTabPopup');
 
-  // Open / Close Comic Series Background
-  function openComicSeries() {
+  if (!comicSeriesBtn || !comicSeriesBg) return;
+
+  // --- Functions ---
+  function openComicSeries(pushHistory = true) {
     comicSeriesBg.classList.add('show');
-    closeComicSeriesBtn.classList.add('show');
+    closeComicSeriesBtn?.classList.add('show');
+
+    if (pushHistory) history.pushState({ page: 'comicseries' }, '', '#comicseries');
   }
 
   function closeComicSeries() {
     comicSeriesBg.classList.remove('show');
-    closeComicSeriesBtn.classList.remove('show');
+    closeComicSeriesBtn?.classList.remove('show');
+
+    if (location.hash === '#comicseries') history.back();
   }
 
-  if (comicSeriesBtn) {
-    comicSeriesBtn.addEventListener('click', e => {
-      e.preventDefault();
-      openComicSeries();
-    });
+  function openPopup() {
+    if (!comicPopup) return;
+    comicPopup.classList.add('show');
   }
-
-  if (closeComicSeriesBtn) {
-    closeComicSeriesBtn.addEventListener('click', closeComicSeries);
-  }
-
-  // Open / Close Comic Tab Popup
-  if (comicTab && comicPopup) {
-    comicTab.addEventListener('click', (e) => {
-      if (!e.target.closest('.comicseriesLinks a')) {
-        comicPopup.classList.add('show');
-      }
-    });
-  }
-
-  if (closePopupBtn && comicPopup) {
-    closePopupBtn.addEventListener('click', () => {
-      comicPopup.classList.remove('show');
-    });
-  }
-
-  // Comic Series Links Transition Hover fixing the issues
-  const links = document.querySelectorAll('.comicseriesLinks a');
-
-  links.forEach(link => {
-    link.addEventListener('mouseenter', () => {
-      link.style.transition = '0.25s';
-    });
-
-    link.addEventListener('mouseleave', () => {
-      link.style.transition = '0.75s';
-
-      setTimeout(() => {
-        link.style.transition = '0.25s';
-      }, 0);
-    });
-  });
-
-  comicPopup.addEventListener('click', (e) => {
-    if (e.target === comicPopup) {
-      closePopup();
-    }
-  });
 
   function closePopup() {
+    if (!comicPopup) return;
     comicPopup.classList.remove('show');
   }
 
-  // ESC key close Comic Series Popup
+  // --- Event Listeners ---
+
+  // Open Comic Series background
+  comicSeriesBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    openComicSeries();
+  });
+
+  // Close Comic Series background
+  closeComicSeriesBtn?.addEventListener('click', closeComicSeries);
+
+  // Open Comic Tab popup
+  comicTab?.addEventListener('click', (e) => {
+    if (!e.target.closest('.comicseriesLinks a')) {
+      openPopup();
+    }
+  });
+
+  // Close Comic Tab popup
+  closePopupBtn?.addEventListener('click', closePopup);
+
+  // Close popup when clicking outside
+  comicPopup?.addEventListener('click', (e) => {
+    if (e.target === comicPopup) closePopup();
+  });
+
+  // Hover transition fix for links
+  document.querySelectorAll('.comicseriesLinks a').forEach(link => {
+    link.addEventListener('mouseenter', () => link.style.transition = '0.25s');
+    link.addEventListener('mouseleave', () => {
+      link.style.transition = '0.75s';
+      setTimeout(() => link.style.transition = '0.25s', 0);
+    });
+  });
+
+  // ESC key closes popup or background
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      if (comicPopup.classList.contains('show')) {
-        comicPopup.classList.remove('show');
-        return;
-      }
+      if (comicPopup?.classList.contains('show')) closePopup();
+      else if (comicSeriesBg.classList.contains('show')) closeComicSeries();
+    }
+  });
 
-      if (comicSeriesBg.classList.contains('show')) {
-        comicSeriesBg.classList.remove('show');
-        closeComicSeriesBtn.classList.remove('show');
-        return;
-      }
+  // Browser back/forward handling
+  window.addEventListener('popstate', () => {
+    if (location.hash === '#comicseries') {
+      openComicSeries(false);
+    } else {
+      closeComicSeries();
+      closePopup();
     }
   });
 });

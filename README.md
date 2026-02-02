@@ -4,6 +4,9 @@
 ## Feedback  
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
 
+## Features (0.9.3.2.2026)
+Minor Update
+
 ## Features (V0.9.26.1.2026)
 Small Redesign Layout and Back button Removed (About)
 

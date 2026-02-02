@@ -6,8 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactSection = document.getElementById('contactBackground');
   const contactBorder = document.querySelector('.contactBorder');
 
-  function disableScroll() { document.body.style.overflow = 'hidden'; }
-  function enableScroll() { document.body.style.overflow = ''; }
+  if (!contactBtn || !contactSection || !contactBorder) return;
 
   function showContact() {
     contactSection.classList.add('open');
@@ -15,8 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     contactBorder.style.left = '40%';
     contactBorder.offsetWidth;
     contactBorder.style.left = '50%';
-
-    disableScroll();
 
     history.pushState({ page: 'contact' }, '', '#contact');
   }
@@ -30,26 +27,30 @@ document.addEventListener('DOMContentLoaded', () => {
       contactBorder.style.left = '40%';
       contactBorder.offsetWidth;
       contactBorder.style.transition = '0.5s ease-out';
+
+      if (location.hash === '#contact') history.back();
     }, { once: true });
-
-    enableScroll();
   }
 
-  if (contactBtn && contactSection && contactBorder) {
-    contactBtn.addEventListener('click', e => {
-      e.preventDefault();
-      showContact();
-    });
+  // Click button to open
+  contactBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    showContact();
+  });
 
-    // Escape key
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && contactSection.classList.contains('open')) {
-        hideContact();
-      }
-    });
+  // Escape key to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && contactSection.classList.contains('open')) {
+      hideContact();
+    }
+  });
 
-    window.addEventListener('popstate', () => {
-      if (contactSection.classList.contains('open')) hideContact();
-    });
-  }
+  // Handle browser back/forward buttons
+  window.addEventListener('popstate', () => {
+    if (location.hash === '#contact' && !contactSection.classList.contains('open')) {
+      showContact(false);
+    } else if (contactSection.classList.contains('open')) {
+      hideContact();
+    }
+  });
 });

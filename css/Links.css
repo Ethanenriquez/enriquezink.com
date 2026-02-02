@@ -130,7 +130,7 @@
 .popup a:hover {
     border: solid 2px rgba(255, 255, 255, 1);
     border-radius: 15px;
-    transform: scale(1.1);
+    transform: scale(1.08);
     transition: 0.25s;
 }
 
