@@ -4,6 +4,11 @@
 ## Feedback  
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
 
+## Features (0.9.12.2.2026)
+Some Files Removed for Code Reduction
+
+Minor Update
+
 ## Features (0.9.3.2.2026)
 Minor Update
 
